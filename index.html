@@ -5,8 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TensorTutors</title>
   <link rel="stylesheet" href="style.css" />
+  <script>
+    // Injects navbar into the #navbar div
+    window.addEventListener("DOMContentLoaded", () => {
+      fetch("nav.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("navbar").innerHTML = data;
+        });
+    });
+  </script>
 </head>
 <body>
+  <!-- Shared navigation -->
+  <div id="navbar"></div>
+
   <header>
     <h1>TensorTutors</h1>
     <p>Expert Tuition in Maths, Physics & Computer Science</p>
