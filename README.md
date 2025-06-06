@@ -24,7 +24,7 @@ Our lessons focus on conceptual clarity, exam technique, and problem-solving ski
 
 This website is:
 
-- Coded from scratch using **HTML**, **CSS**, and **JavaScript** (optional)
+- Coded from scratch using **HTML**, **CSS**, and **JavaScript** 
 - Hosted on **GitHub Pages**
 - Secured with free **HTTPS**
 - Linked to a custom domain: `tensortutors.com`
