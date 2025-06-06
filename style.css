@@ -40,3 +40,34 @@ footer {
   margin-top: 40px;
   color: #777;
 }
+
+/* Top Navbar */
+.navbar {
+  background-color: #222;
+  padding: 1em 2em;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5em;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav-list li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.nav-list li a:hover {
+  color: #00ccff;
+}
