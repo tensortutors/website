@@ -3,52 +3,120 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TensorTutors</title>
-  <link rel="stylesheet" href="style.css" />
-  <script>
-    // Injects navbar into the #navbar div
-    window.addEventListener("DOMContentLoaded", () => {
-      fetch("nav.html")
-        .then(res => res.text())
-        .then(data => {
-          document.getElementById("navbar").innerHTML = data;
-        });
-    });
-  </script>
+  <title>TensorTutors – Expert Tuition in Maths, Physics & Computer Science</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Shared navigation -->
-  <div id="navbar"></div>
 
+  <!-- Header / Navbar -->
   <header>
-    <h1>TensorTutors</h1>
-    <p>Expert Tuition in Maths, Physics & Computer Science</p>
+    <nav>
+      <div class="logo">TensorTutors</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Subjects</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">Book a Lesson</a></li>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main>
-    <section>
-      <h2>What We Offer</h2>
-      <ul>
-        <li><strong>Mathematics</strong> – from core concepts to exam strategies</li>
-        <li><strong>Physics</strong> – build intuition and master problem-solving</li>
-        <li><strong>Computer Science</strong> – logic, programming, and algorithms</li>
-        <li><strong>Discussions</strong> – free weekly online meetings for all our members, topic list coming soon!</li>
-      </ul>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Master Maths, Physics & Computer Science – the Smarter Way</h1>
+      <p>High-achieving tutors. Personalised learning. Trusted by GCSE & A-Level students.</p>
+      <a href="#" class="btn-primary">Book a Free Consultation</a>
+    </div>
+    <!-- Placeholder for Hero Image -->
+    <div class="hero-image">[Hero Image Placeholder]</div>
+  </section>
 
-    <section>
-      <h2>Meet the Tutors</h2>
-      <p>Max, Jack, and Apoorva are passionate tutors with top academic backgrounds, offering personalised support for GCSE and A-Level students.</p>
-    </section>
+  <!-- What We Offer -->
+  <section class="offerings">
+    <h2>What We Offer</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>🧠 Maths</h3>
+        <p>Deep understanding + top-grade strategies</p>
+      </div>
+      <div class="card">
+        <h3>🌌 Physics</h3>
+        <p>Build real intuition & ace problem-solving</p>
+      </div>
+      <div class="card">
+        <h3>💻 Computer Science</h3>
+        <p>Learn to code, reason, and succeed</p>
+      </div>
+      <div class="card">
+        <h3>💬 Weekly Discussions</h3>
+        <p>Exclusive topic-based sessions (Coming soon!)</p>
+      </div>
+    </div>
+  </section>
 
-    <section>
-      <h2>Contact Us</h2>
-      <p>Email us at <a href="mailto:contact@tensortutors.com">contact@tensortutors.com</a></p>
-    </section>
-  </main>
+  <!-- Meet the Tutors -->
+  <section class="tutors">
+    <h2>Meet the Tutors</h2>
+    <div class="tutor-profiles">
+      <div class="tutor">
+        <div class="tutor-photo">[Max's Photo Placeholder]</div>
+        <h4>Max</h4>
+        <p>Mathematics tutor – Studying Mathematics at Royal St Andrews University with A* grades in Maths and Further Maths</p>
+      </div>
+      <div class="tutor">
+        <div class="tutor-photo">[Apoorva's Photo Placeholder]</div>
+        <h4>Apoorva</h4>
+        <p>Physics tutor – Persuing Aeronautical Engineering at Tu Delft University with A* grades in Maths and Physics</p>
+      </div>
+      <div class="tutor">
+        <div class="tutor-photo">[Jack's Photo Placeholder]</div>
+        <h4>Apoorva</h4>
+        <p>Computer Science tutor – Studying Natural Sciences at Durham University with A* grades in Maths and Computer Science</p>
+      </div>
+    </div>
 
+    <a href="#" class="btn-secondary">See Our Full Profiles</a>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2>What Students Say</h2>
+    <blockquote>“Jack helped me turn a D into an A in Physics – highly recommend!”</blockquote>
+    <blockquote>“The weekly discussions made Computer Science *click* for me.”</blockquote>
+  </section>
+
+  <!-- Resources -->
+  <section class="resources">
+    <h2>Free Resources & Videos</h2>
+    <div class="featured-video">[YouTube Embed Placeholder]</div>
+    <a href="#" class="btn-primary">Explore Resources</a>
+  </section>
+
+  <!-- How to Get Started -->
+  <section class="get-started">
+    <h2>Get Started in 3 Easy Steps</h2>
+    <ol>
+      <li><strong>Book a Free Consultation</strong></li>
+      <li><strong>Get Matched with a Tutor</strong></li>
+      <li><strong>Start Mastering Your Subject</strong></li>
+    </ol>
+    <a href="#" class="btn-primary">Book Now</a>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 TensorTutors</p>
+    <p>Contact us at <a href="mailto:contact@tensortutors.com">contact@tensortutors.com</a></p>
+    <ul class="footer-links">
+      <li><a href="#">About</a></li>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">YouTube</a></li>
+    </ul>
+    <p>© 2025 TensorTutors</p>
   </footer>
+
 </body>
 </html>
