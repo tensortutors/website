@@ -7,7 +7,6 @@
   <title>TensorTutors</title>
   <link rel="stylesheet" href="style.css" />
   <script>
-    // Injects navbar into the #navbar div
     window.addEventListener("DOMContentLoaded", () => {
       fetch("nav.html")
         .then(res => res.text())
@@ -18,18 +17,20 @@
   </script>
 </head>
 <body>
-  <!-- Shared navigation -->
+
+  <!-- Top Navigation Bar -->
   <div id="navbar"></div>
 
-  <!-- Header with Logo -->
-  <header>
-    <div class="logo"></div>
-    <h1>TensorTutors</h1>
-    <p class="subtitle">Expert Tuition in Maths, Physics & Computer Science</p>
-  </header>
-
-  <!-- Main content -->
+  <!-- Page Content -->
   <main>
+    <header class="hero">
+      <div class="hero-content">
+        <h1>Welcome to TensorTutors</h1>
+        <p class="subtitle">Expert tuition in Maths, Physics & Computer Science</p>
+      </div>
+    </header>
+
+    <!-- What We Offer Section -->
     <section class="card">
       <h2>What We Offer</h2>
       <ul>
@@ -40,17 +41,20 @@
       </ul>
     </section>
 
+    <!-- Meet the Tutors -->
     <section class="card">
       <h2>Meet the Tutors</h2>
       <p>Max, Jack, and Apoorva are passionate tutors with top academic backgrounds, offering personalised support for GCSE and A-Level students.</p>
     </section>
 
+    <!-- Contact -->
     <section class="card">
       <h2>Contact Us</h2>
       <p>Email us at <a href="mailto:contact@tensortutors.com">contact@tensortutors.com</a></p>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 TensorTutors. All rights reserved.</p>
   </footer>
