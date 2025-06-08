@@ -46,7 +46,7 @@ body {
 }
 
 .logo-small {
-  background: url('images/TTlogo_transparent.png') no-repeat center center;
+  background: url('images/TTlogo_semi.png') no-repeat center center;
   background-size: contain;
   height: 40px;
   width: 40px;
