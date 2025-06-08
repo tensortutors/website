@@ -18,30 +18,53 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: var(--pale-lavender-grey);
+  background: var(--white);
   color: var(--black);
   line-height: 1.6;
-  padding: 20px;
-  max-width: 1000px;
-  margin: auto;
+  padding: 0;
+  margin: 0;
 }
 
-/* ===== Navigation ===== */
+/* ===== Navigation Bar ===== */
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: var(--very-dark-indigo);
   padding: 1em 2em;
+  width: 100%;
   position: sticky;
   top: 0;
-  width: 100%;
   z-index: 1000;
+  border-bottom: 4px solid var(--royal-blue-purple);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-small {
+  background: url('images/TTlogo_transparent.png') no-repeat center center;
+  background-size: contain;
+  height: 40px;
+  width: 40px;
+}
+
+.nav-title {
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .nav-list {
   list-style: none;
   display: flex;
   gap: 1.5em;
-  justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-list li a {
@@ -55,60 +78,57 @@ body {
   color: var(--muted-lavender-blue);
 }
 
-/* ===== Header ===== */
-header {
+/* ===== Hero Header ===== */
+.hero {
+  padding: 3rem 1rem 2rem;
   text-align: center;
-  padding: 2rem 1rem 1rem;
+  background: var(--white);
 }
 
-.logo {
-  background: url('images/TTlogo_transparent.png') no-repeat center center;
-  background-size: contain;
-  height: 60px;
-  width: 150px;
-  margin: 0 auto 1rem;
-}
-
-h1 {
+.hero h1 {
   font-size: 2.5rem;
   color: var(--royal-blue-purple);
+  margin-bottom: 0.5rem;
 }
 
 .subtitle {
   font-size: 1.2rem;
   color: var(--very-dark-indigo);
-  margin-top: 0.5rem;
 }
 
 /* ===== Main Layout ===== */
 main {
-  padding: 1rem 0;
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem 1rem;
 }
 
-/* ===== Sections ===== */
-section {
-  margin-bottom: 2rem;
-}
-
+/* ===== Card Sections ===== */
 .card {
-  background-color: var(--medium-periwinkle);
-  color: var(--white);
-  padding: 1.5rem 2rem;
+  background-color: var(--pale-lavender-grey);
+  color: var(--black);
+  padding: 2rem;
+  margin-bottom: 2rem;
   border-radius: 16px;
-  box-shadow: 0 6px 12px rgba(17, 14, 89, 0.15);
+  box-shadow: 0 10px 20px rgba(17, 14, 89, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(17, 14, 89, 0.15);
 }
 
 /* ===== Headings ===== */
 h2 {
-  color: var(--white);
-  font-size: 1.8rem;
+  font-size: 1.75rem;
+  color: var(--royal-blue-purple);
   margin-bottom: 1rem;
 }
 
-/* ===== Lists ===== */
 ul {
-  margin-top: 0.5rem;
   padding-left: 1.5rem;
+  margin-top: 0.5rem;
 }
 
 li {
@@ -117,9 +137,9 @@ li {
 
 /* ===== Links ===== */
 a {
-  color: var(--white);
-  font-weight: bold;
+  color: var(--royal-blue-purple);
   text-decoration: underline;
+  font-weight: bold;
 }
 
 a:hover {
@@ -130,9 +150,8 @@ a:hover {
 footer {
   text-align: center;
   margin-top: 4rem;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   background: var(--very-dark-indigo);
   color: var(--white);
-  border-radius: 12px;
   font-size: 0.9rem;
 }
