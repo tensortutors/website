@@ -25,18 +25,18 @@ body {
   margin: 0;
 }
 
-/* ===== Navigation Bar ===== */
+/* === NAVBAR LAYOUT === */
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   background-color: var(--very-dark-indigo);
   padding: 1em 2em;
-  width: 100%;
+  border-bottom: 4px solid var(--royal-blue-purple);
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 4px solid var(--royal-blue-purple);
+  flex-wrap: wrap;
 }
 
 .nav-left {
@@ -46,7 +46,7 @@ body {
 }
 
 .logo-small {
-  background: url('images/TTlogo_semi.png') no-repeat center center;
+  background: url('images/TTlogo_transparent.png') no-repeat center center;
   background-size: contain;
   height: 40px;
   width: 40px;
@@ -56,8 +56,22 @@ body {
   color: var(--white);
   font-size: 1.5rem;
   font-weight: bold;
+  line-height: 1;
+  display: flex;
+  align-items: center;
 }
 
+/* === NAV TOGGLE (MOBILE) === */
+.nav-toggle {
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+/* === NAV LINKS === */
 .nav-list {
   list-style: none;
   display: flex;
@@ -76,6 +90,33 @@ body {
 
 .nav-list li a:hover {
   color: var(--muted-lavender-blue);
+}
+
+/* === RESPONSIVE BEHAVIOUR === */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-list {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 1em;
+  }
+
+  .nav-list.show-nav {
+    display: flex;
+  }
+
+  .nav-list li {
+    text-align: left;
+    padding: 0.5em 0;
+  }
+
+  .navbar {
+    align-items: flex-start;
+  }
 }
 
 /* ===== Hero Header ===== */
