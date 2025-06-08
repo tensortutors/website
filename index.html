@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="images/TTlogo_semi.png" type="image/png">
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light" />
   <title>TensorTutors</title>
+  <link rel="icon" href="images/TTlogo_semi.png" type="image/png">
   <link rel="stylesheet" href="style.css" />
   <script>
-    // Injects navbar into the #navbar div
     window.addEventListener("DOMContentLoaded", () => {
       fetch("nav.html")
         .then(res => res.text())
@@ -17,6 +17,7 @@
     });
   </script>
 </head>
+
 <body>
   <!-- Shared navigation -->
   <div id="navbar"></div>
