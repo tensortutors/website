@@ -1,3 +1,14 @@
+/* Brand Colour Palette */
+:root {
+  --very-dark-indigo: #110E59;
+  --royal-blue-purple: #211CA6;
+  --medium-periwinkle: #463FB1;
+  --muted-lavender-blue: #6D65D4;
+  --pale-lavender-grey: #C1C2D9;
+  --white: #FFFFFF;
+  --black: #000000;
+}
+
 /* Basic Reset */
 * {
   margin: 0;
@@ -6,10 +17,10 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   line-height: 1.6;
-  background: #f9f9f9;
-  color: #333;
+  background: var(--pale-lavender-grey);
+  color: var(--black);
   padding: 20px;
   max-width: 800px;
   margin: auto;
@@ -20,14 +31,20 @@ header {
   padding-bottom: 20px;
 }
 
+header img {
+  max-height: 60px;
+  margin-bottom: 10px;
+}
+
+/* Headings */
 h1 {
   font-size: 2.5rem;
-  color: #004080;
+  color: var(--royal-blue-purple);
 }
 
 h2 {
   margin-top: 30px;
-  color: #0066cc;
+  color: var(--muted-lavender-blue);
 }
 
 ul {
@@ -35,15 +52,16 @@ ul {
   padding-left: 20px;
 }
 
+/* Footer */
 footer {
   text-align: center;
   margin-top: 40px;
-  color: #777;
+  color: var(--very-dark-indigo);
 }
 
 /* Top Navbar */
 .navbar {
-  background-color: #222;
+  background-color: var(--very-dark-indigo);
   padding: 1em 2em;
   position: sticky;
   top: 0;
@@ -62,12 +80,48 @@ footer {
 }
 
 .nav-list li a {
-  color: white;
+  color: var(--white);
   text-decoration: none;
   font-weight: bold;
   transition: color 0.2s ease;
 }
 
 .nav-list li a:hover {
-  color: #00ccff;
+  color: var(--muted-lavender-blue);
+}
+
+/* Cards or Section Boxes (Optional) */
+.card {
+  background-color: var(--medium-periwinkle);
+  color: var(--white);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+  box-shadow: 0 4px 10px rgba(17, 14, 89, 0.2);
+}
+
+/* Buttons */
+button, .btn {
+  background-color: var(--royal-blue-purple);
+  color: var(--white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+button:hover, .btn:hover {
+  background-color: var(--muted-lavender-blue);
+}
+
+/* Logo */
+.logo {
+  display: block;
+  background: url('images/TTlogo_transparent.png') no-repeat center center;
+  background-size: contain;
+  height: 60px;
+  width: 150px;
+  margin: 0 auto 10px auto;
 }
