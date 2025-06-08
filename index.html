@@ -59,5 +59,25 @@
   <footer>
     <p>&copy; 2025 TensorTutors. All rights reserved.</p>
   </footer>
+
+  <script>
+  window.addEventListener("DOMContentLoaded", () => {
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+
+        // Now bind the toggle AFTER injection
+        const toggle = document.getElementById('nav-toggle');
+        const nav = document.getElementById('nav-list');
+        if (toggle && nav) {
+          toggle.addEventListener('click', () => {
+            nav.classList.toggle('show-nav');
+          });
+        }
+      });
+  });
+</script>
+
 </body>
 </html>
