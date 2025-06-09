@@ -5,20 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resources | TensorTutors</title>
   <link rel="stylesheet" href="style.css" />
-  <script>
-    window.addEventListener("DOMContentLoaded", () => {
-      fetch("nav.html")
-        .then(res => res.text())
-        .then(data => {
-          document.getElementById("navbar").innerHTML = data;
-        });
-    });
-
-    function toggleCollapse(id) {
-      const el = document.getElementById(id);
-      el.style.display = el.style.display === 'none' ? 'block' : 'none';
-    }
-  </script>
   <style>
     .collapse-button {
       background-color: var(--royal-blue-purple);
@@ -30,6 +16,8 @@
       font-size: 1rem;
       cursor: pointer;
       transition: background-color 0.2s ease;
+      width: 100%;
+      text-align: left;
     }
 
     .collapse-button:hover {
@@ -54,25 +42,6 @@
       text-decoration: underline;
       color: var(--royal-blue-purple);
     }
-
-    .cta-top {
-      display: inline-block;
-      background-color: var(--royal-blue-purple);
-      color: var(--white);
-      padding: 1rem 2rem;
-      border-radius: 12px;
-      font-size: 1.1rem;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 2rem auto 2rem;
-      display: block;
-      text-align: center;
-      transition: background-color 0.2s ease;
-    }
-
-    .cta-top:hover {
-      background-color: var(--medium-periwinkle);
-    }
   </style>
 </head>
 
@@ -88,25 +57,25 @@
     <!-- Maths -->
     <section class="card" id="maths">
       <h2>Maths</h2>
-      <button class="collapse-button" onclick="toggleCollapse('maths-notes')">📘 Summary Notes</button>
+      <button class="collapse-button" data-target="maths-notes">📘 Summary Notes</button>
       <div class="collapse-content" id="maths-notes">
         <a href="#" class="resource-link">Algebra Notes (PDF)</a>
         <a href="#" class="resource-link">Calculus Guide (PDF)</a>
       </div>
 
-      <button class="collapse-button" onclick="toggleCollapse('maths-examples')">✅ Worked Examples</button>
+      <button class="collapse-button" data-target="maths-examples">✅ Worked Examples</button>
       <div class="collapse-content" id="maths-examples">
         <a href="#" class="resource-link">Differentiation Example</a>
         <a href="#" class="resource-link">Trigonometric Identities</a>
       </div>
 
-      <button class="collapse-button" onclick="toggleCollapse('maths-checklists')">📊 Spec Checklists / Topic Maps</button>
+      <button class="collapse-button" data-target="maths-checklists">📊 Spec Checklists / Topic Maps</button>
       <div class="collapse-content" id="maths-checklists">
         <a href="#" class="resource-link">A-Level Maths Checklist</a>
         <a href="#" class="resource-link">Topic Map (Pure Maths)</a>
       </div>
 
-      <button class="collapse-button" onclick="toggleCollapse('maths-videos')">🎥 YouTube Videos</button>
+      <button class="collapse-button" data-target="maths-videos">🎥 YouTube Videos</button>
       <div class="collapse-content" id="maths-videos">
         <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
       </div>
@@ -115,23 +84,23 @@
     <!-- Physics -->
     <section class="card" id="physics">
       <h2>Physics</h2>
-      <button class="collapse-button" onclick="toggleCollapse('physics-notes')">📘 Summary Notes</button>
+      <button class="collapse-button" data-target="physics-notes">📘 Summary Notes</button>
       <div class="collapse-content" id="physics-notes">
         <a href="#" class="resource-link">Mechanics Notes</a>
         <a href="#" class="resource-link">Waves Revision Sheet</a>
       </div>
 
-      <button class="collapse-button" onclick="toggleCollapse('physics-examples')">✅ Worked Examples</button>
+      <button class="collapse-button" data-target="physics-examples">✅ Worked Examples</button>
       <div class="collapse-content" id="physics-examples">
         <a href="#" class="resource-link">Projectile Motion Problem</a>
       </div>
 
-      <button class="collapse-button" onclick="toggleCollapse('physics-checklists')">📊 Spec Checklists / Topic Maps</button>
+      <button class="collapse-button" data-target="physics-checklists">📊 Spec Checklists / Topic Maps</button>
       <div class="collapse-content" id="physics-checklists">
         <a href="#" class="resource-link">AQA Physics Checklist</a>
       </div>
 
-      <button class="collapse-button" onclick="toggleCollapse('physics-videos')">🎥 YouTube Videos</button>
+      <button class="collapse-button" data-target="physics-videos">🎥 YouTube Videos</button>
       <div class="collapse-content" id="physics-videos">
         <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
       </div>
@@ -140,23 +109,23 @@
     <!-- Computer Science -->
     <section class="card" id="cs">
       <h2>Computer Science</h2>
-      <button class="collapse-button" onclick="toggleCollapse('cs-notes')">📘 Summary Notes</button>
+      <button class="collapse-button" data-target="cs-notes">📘 Summary Notes</button>
       <div class="collapse-content" id="cs-notes">
         <a href="#" class="resource-link">Data Structures Overview</a>
         <a href="#" class="resource-link">System Architecture Notes</a>
       </div>
 
-      <button class="collapse-button" onclick="toggleCollapse('cs-examples')">✅ Worked Examples</button>
+      <button class="collapse-button" data-target="cs-examples">✅ Worked Examples</button>
       <div class="collapse-content" id="cs-examples">
         <a href="#" class="resource-link">Trace Table Example</a>
       </div>
 
-      <button class="collapse-button" onclick="toggleCollapse('cs-checklists')">📊 Spec Checklists / Topic Maps</button>
+      <button class="collapse-button" data-target="cs-checklists">📊 Spec Checklists / Topic Maps</button>
       <div class="collapse-content" id="cs-checklists">
         <a href="#" class="resource-link">OCR Comp Sci Checklist</a>
       </div>
 
-      <button class="collapse-button" onclick="toggleCollapse('cs-videos')">🎥 YouTube Videos</button>
+      <button class="collapse-button" data-target="cs-videos">🎥 YouTube Videos</button>
       <div class="collapse-content" id="cs-videos">
         <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
       </div>
@@ -166,5 +135,28 @@
   <footer>
     <p>&copy; 2025 TensorTutors</p>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Toggle navbar
+      fetch("nav.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("navbar").innerHTML = data;
+        });
+
+      // Toggle collapsibles
+      const buttons = document.querySelectorAll('.collapse-button');
+      buttons.forEach(button => {
+        const targetId = button.dataset.target;
+        button.addEventListener('click', () => {
+          const content = document.getElementById(targetId);
+          if (content) {
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
