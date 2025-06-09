@@ -14,45 +14,64 @@
         });
     });
 
-    // Simple collapsible toggles
-    function toggleSection(id) {
+    function toggleCollapse(id) {
       const el = document.getElementById(id);
-      el.style.display = el.style.display === "none" ? "block" : "none";
+      el.style.display = el.style.display === 'none' ? 'block' : 'none';
     }
   </script>
   <style>
-    .collapsible {
-      background-color: #0066cc;
-      color: white;
-      cursor: pointer;
-      padding: 10px 15px;
-      width: 100%;
+    .collapse-button {
+      background-color: var(--royal-blue-purple);
+      color: var(--white);
+      padding: 0.75rem 1.25rem;
       border: none;
-      text-align: left;
+      border-radius: 12px;
+      margin-top: 1rem;
       font-size: 1rem;
-      border-radius: 8px;
-      margin-top: 10px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
     }
 
-    .collapsible:hover {
-      background-color: #004f99;
+    .collapse-button:hover {
+      background-color: var(--medium-periwinkle);
     }
 
-    .collapsible-content {
+    .collapse-content {
       display: none;
-      margin-top: 10px;
-      padding-left: 10px;
+      margin-top: 0.5rem;
+      padding-left: 1rem;
     }
 
     .resource-link {
       display: block;
-      margin: 5px 0;
+      margin: 0.5rem 0;
       text-decoration: none;
-      color: #004080;
+      color: var(--very-dark-indigo);
+      font-weight: 500;
     }
 
     .resource-link:hover {
       text-decoration: underline;
+      color: var(--royal-blue-purple);
+    }
+
+    .cta-top {
+      display: inline-block;
+      background-color: var(--royal-blue-purple);
+      color: var(--white);
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 2rem auto 2rem;
+      display: block;
+      text-align: center;
+      transition: background-color 0.2s ease;
+    }
+
+    .cta-top:hover {
+      background-color: var(--medium-periwinkle);
     }
   </style>
 </head>
@@ -60,85 +79,87 @@
 <body>
   <div id="navbar"></div>
 
-  <header>
+  <header class="hero">
     <h1>Free Resources</h1>
-    <p>Topic notes, examples, videos and more — sorted by subject.</p>
+    <p class="subtitle">Expert-crafted notes, examples, videos, and more — all sorted for you.</p>
   </header>
 
   <main>
-    <!-- Maths Section -->
-    <section>
+    <a href="#maths" class="cta-top">Start Learning</a>
+
+    <!-- Maths -->
+    <section class="card" id="maths">
       <h2>Maths</h2>
-      <button class="collapsible" onclick="toggleSection('maths-notes')">📘 Summary Notes</button>
-      <div id="maths-notes" class="collapsible-content">
+      <button class="collapse-button" onclick="toggleCollapse('maths-notes')">📘 Summary Notes</button>
+      <div class="collapse-content" id="maths-notes">
         <a href="#" class="resource-link">Algebra Notes (PDF)</a>
-        <a href="#" class="resource-link">Calculus Overview (PDF)</a>
+        <a href="#" class="resource-link">Calculus Guide (PDF)</a>
       </div>
 
-      <button class="collapsible" onclick="toggleSection('maths-examples')">✅ Worked Examples</button>
-      <div id="maths-examples" class="collapsible-content">
-        <a href="#" class="resource-link">Differentiation Step-by-Step</a>
-        <a href="#" class="resource-link">Binomial Expansion Problem</a>
+      <button class="collapse-button" onclick="toggleCollapse('maths-examples')">✅ Worked Examples</button>
+      <div class="collapse-content" id="maths-examples">
+        <a href="#" class="resource-link">Differentiation Example</a>
+        <a href="#" class="resource-link">Trigonometric Identities</a>
       </div>
 
-      <button class="collapsible" onclick="toggleSection('maths-spec')">📊 Spec Checklists / Maps</button>
-      <div id="maths-spec" class="collapsible-content">
+      <button class="collapse-button" onclick="toggleCollapse('maths-checklists')">📊 Spec Checklists / Topic Maps</button>
+      <div class="collapse-content" id="maths-checklists">
         <a href="#" class="resource-link">A-Level Maths Checklist</a>
-        <a href="#" class="resource-link">Topic Map (Pure)</a>
+        <a href="#" class="resource-link">Topic Map (Pure Maths)</a>
       </div>
 
-      <button class="collapsible" onclick="toggleSection('maths-videos')">🎥 YouTube Videos</button>
-      <div id="maths-videos" class="collapsible-content">
+      <button class="collapse-button" onclick="toggleCollapse('maths-videos')">🎥 YouTube Videos</button>
+      <div class="collapse-content" id="maths-videos">
         <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
       </div>
     </section>
 
-    <!-- Physics Section -->
-    <section>
+    <!-- Physics -->
+    <section class="card" id="physics">
       <h2>Physics</h2>
-      <button class="collapsible" onclick="toggleSection('physics-notes')">📘 Summary Notes</button>
-      <div id="physics-notes" class="collapsible-content">
-        <a href="#" class="resource-link">Mechanics Revision Notes</a>
-        <a href="#" class="resource-link">Electricity Quick Guide</a>
+      <button class="collapse-button" onclick="toggleCollapse('physics-notes')">📘 Summary Notes</button>
+      <div class="collapse-content" id="physics-notes">
+        <a href="#" class="resource-link">Mechanics Notes</a>
+        <a href="#" class="resource-link">Waves Revision Sheet</a>
       </div>
 
-      <button class="collapsible" onclick="toggleSection('physics-examples')">✅ Worked Examples</button>
-      <div id="physics-examples" class="collapsible-content">
-        <a href="#" class="resource-link">SUVAT Problem Walkthrough</a>
+      <button class="collapse-button" onclick="toggleCollapse('physics-examples')">✅ Worked Examples</button>
+      <div class="collapse-content" id="physics-examples">
+        <a href="#" class="resource-link">Projectile Motion Problem</a>
       </div>
 
-      <button class="collapsible" onclick="toggleSection('physics-spec')">📊 Spec Checklists / Maps</button>
-      <div id="physics-spec" class="collapsible-content">
-        <a href="#" class="resource-link">AQA Physics Spec Map</a>
+      <button class="collapse-button" onclick="toggleCollapse('physics-checklists')">📊 Spec Checklists / Topic Maps</button>
+      <div class="collapse-content" id="physics-checklists">
+        <a href="#" class="resource-link">AQA Physics Checklist</a>
       </div>
 
-      <button class="collapsible" onclick="toggleSection('physics-videos')">🎥 YouTube Videos</button>
-      <div id="physics-videos" class="collapsible-content">
+      <button class="collapse-button" onclick="toggleCollapse('physics-videos')">🎥 YouTube Videos</button>
+      <div class="collapse-content" id="physics-videos">
         <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
       </div>
     </section>
 
-    <!-- Computer Science Section -->
-    <section>
+    <!-- Computer Science -->
+    <section class="card" id="cs">
       <h2>Computer Science</h2>
-      <button class="collapsible" onclick="toggleSection('cs-notes')">📘 Summary Notes</button>
-      <div id="cs-notes" class="collapsible-content">
-        <a href="#" class="resource-link">Logic Gates Guide</a>
-        <a href="#" class="resource-link">Data Structures Notes</a>
+      <button class="collapse-button" onclick="toggleCollapse('cs-notes')">📘 Summary Notes</button>
+      <div class="collapse-content" id="cs-notes">
+        <a href="#" class="resource-link">Data Structures Overview</a>
+        <a href="#" class="resource-link">System Architecture Notes</a>
       </div>
 
-      <button class="collapsible" onclick="toggleSection('cs-examples')">✅ Worked Examples</button>
-      <div id="cs-examples" class="collapsible-content">
-        <a href="#" class="resource-link">Dijkstra’s Algorithm Example</a>
+      <button class="collapse-button" onclick="toggleCollapse('cs-examples')">✅ Worked Examples</button>
+      <div class="collapse-content" id="cs-examples">
+        <a href="#" class="resource-link">Trace Table Example</a>
       </div>
 
-      <button class="collapsible" onclick="toggleSection('cs-spec')">📊 Spec Checklists / Maps</button>
-      <div id="cs-spec" class="collapsible-content">
+      <button class="collapse-button" onclick="toggleCollapse('cs-checklists')">📊 Spec Checklists / Topic Maps</button>
+      <div class="collapse-content" id="cs-checklists">
         <a href="#" class="resource-link">OCR Comp Sci Checklist</a>
       </div>
 
-      <button class="collapsible" onclick="toggleSection('cs-videos')">🎥 YouTube Videos</button>
-      <div id="cs-videos" class="collapsible-content">
+      <button class="collapse-button" onclick="toggleCollapse('cs-videos')">🎥 YouTube Videos</button>
+      <div class="collapse-content" id="cs-videos">
         <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
       </div>
     </section>
