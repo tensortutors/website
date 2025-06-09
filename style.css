@@ -1,4 +1,15 @@
-/* Basic Reset */
+/* ===== Brand Colour Palette ===== */
+:root {
+  --very-dark-indigo: #110E59;
+  --royal-blue-purple: #211CA6;
+  --medium-periwinkle: #463FB1;
+  --muted-lavender-blue: #6D65D4;
+  --pale-lavender-grey: #C1C2D9;
+  --white: #FFFFFF;
+  --black: #000000;
+}
+
+/* ===== Reset & Base ===== */
 * {
   margin: 0;
   padding: 0;
@@ -6,68 +17,184 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--white);
+  color: var(--black);
   line-height: 1.6;
-  background: #f9f9f9;
-  color: #333;
-  padding: 20px;
-  max-width: 800px;
-  margin: auto;
+  padding: 0;
+  margin: 0;
 }
 
-header {
-  text-align: center;
-  padding-bottom: 20px;
-}
-
-h1 {
-  font-size: 2.5rem;
-  color: #004080;
-}
-
-h2 {
-  margin-top: 30px;
-  color: #0066cc;
-}
-
-ul {
-  margin: 10px 0;
-  padding-left: 20px;
-}
-
-footer {
-  text-align: center;
-  margin-top: 40px;
-  color: #777;
-}
-
-/* Top Navbar */
+/* === NAVBAR LAYOUT === */
 .navbar {
-  background-color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--very-dark-indigo);
   padding: 1em 2em;
+  border-bottom: 4px solid var(--royal-blue-purple);
   position: sticky;
   top: 0;
-  width: 100%;
   z-index: 1000;
-}
-
-.nav-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 1.5em;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-small {
+  background: url('images/TTlogo_semi.png') no-repeat center center;
+  background-size: contain;
+  height: 40px;
+  width: 40px;
+}
+
+.nav-title {
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* === NAV TOGGLE (MOBILE) === */
+.nav-toggle {
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+/* === NAV LINKS === */
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
 .nav-list li a {
-  color: white;
+  color: var(--white);
   text-decoration: none;
   font-weight: bold;
   transition: color 0.2s ease;
 }
 
 .nav-list li a:hover {
-  color: #00ccff;
+  color: var(--muted-lavender-blue);
+}
+
+/* === RESPONSIVE BEHAVIOUR === */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-list {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 1em;
+  }
+
+  .nav-list.show-nav {
+    display: flex;
+  }
+
+  .nav-list li {
+    text-align: left;
+    padding: 0.5em 0;
+  }
+
+  .navbar {
+    align-items: flex-start;
+  }
+}
+
+/* ===== Hero Header ===== */
+.hero {
+  padding: 3rem 1rem 2rem;
+  text-align: center;
+  background: var(--white);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: var(--royal-blue-purple);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--very-dark-indigo);
+}
+
+/* ===== Main Layout ===== */
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+/* ===== Card Sections ===== */
+.card {
+  background-color: #EBEDFB; /* Soft periwinkle */
+  color: var(--black);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 16px;
+  border: 1px solid #D8DBF1; /* Slight contrast edge */
+  box-shadow: 0 8px 16px rgba(17, 14, 89, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(17, 14, 89, 0.12);
+}
+
+
+/* ===== Headings ===== */
+h2 {
+  font-size: 1.75rem;
+  color: var(--royal-blue-purple);
+  margin-bottom: 1rem;
+}
+
+ul {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+li {
+  margin-bottom: 0.75rem;
+}
+
+/* ===== Links ===== */
+a {
+  color: var(--royal-blue-purple);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--muted-lavender-blue);
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 1.5rem 0;
+  background: var(--very-dark-indigo);
+  color: var(--white);
+  font-size: 0.9rem;
 }
