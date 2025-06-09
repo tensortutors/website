@@ -3,31 +3,144 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Free Resources | TensorTutors</title>
-  <link rel="stylesheet" href="../style.css" />
+  <title>Resources | TensorTutors</title>
+  <link rel="stylesheet" href="style.css" />
   <script>
     window.addEventListener("DOMContentLoaded", () => {
-      fetch("../nav.html")
+      fetch("nav.html")
         .then(res => res.text())
         .then(data => {
           document.getElementById("navbar").innerHTML = data;
         });
     });
+
+    // Simple collapsible toggles
+    function toggleSection(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === "none" ? "block" : "none";
+    }
   </script>
+  <style>
+    .collapsible {
+      background-color: #0066cc;
+      color: white;
+      cursor: pointer;
+      padding: 10px 15px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      font-size: 1rem;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    .collapsible:hover {
+      background-color: #004f99;
+    }
+
+    .collapsible-content {
+      display: none;
+      margin-top: 10px;
+      padding-left: 10px;
+    }
+
+    .resource-link {
+      display: block;
+      margin: 5px 0;
+      text-decoration: none;
+      color: #004080;
+    }
+
+    .resource-link:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
+
 <body>
   <div id="navbar"></div>
 
+  <header>
+    <h1>Free Resources</h1>
+    <p>Topic notes, examples, videos and more — sorted by subject.</p>
+  </header>
+
   <main>
-    <section class="hero">
-      <h1>📄 Free Resources</h1>
-      <p class="subtitle">Concise notes, worked examples, and more – all available for free.</p>
+    <!-- Maths Section -->
+    <section>
+      <h2>Maths</h2>
+      <button class="collapsible" onclick="toggleSection('maths-notes')">📘 Summary Notes</button>
+      <div id="maths-notes" class="collapsible-content">
+        <a href="#" class="resource-link">Algebra Notes (PDF)</a>
+        <a href="#" class="resource-link">Calculus Overview (PDF)</a>
+      </div>
+
+      <button class="collapsible" onclick="toggleSection('maths-examples')">✅ Worked Examples</button>
+      <div id="maths-examples" class="collapsible-content">
+        <a href="#" class="resource-link">Differentiation Step-by-Step</a>
+        <a href="#" class="resource-link">Binomial Expansion Problem</a>
+      </div>
+
+      <button class="collapsible" onclick="toggleSection('maths-spec')">📊 Spec Checklists / Maps</button>
+      <div id="maths-spec" class="collapsible-content">
+        <a href="#" class="resource-link">A-Level Maths Checklist</a>
+        <a href="#" class="resource-link">Topic Map (Pure)</a>
+      </div>
+
+      <button class="collapsible" onclick="toggleSection('maths-videos')">🎥 YouTube Videos</button>
+      <div id="maths-videos" class="collapsible-content">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+      </div>
     </section>
 
+    <!-- Physics Section -->
     <section>
-      <div class="card">📘 <strong>Notes:</strong> Topic summary PDFs (coming soon)</div>
-      <div class="card">🧠 <strong>Worked Examples:</strong> Step-by-step solutions to exam-style questions</div>
-      <div class="card">🎥 <strong>Video Links:</strong> Watch explainer videos on our <a href="../youtube.html">YouTube channel</a></div>
+      <h2>Physics</h2>
+      <button class="collapsible" onclick="toggleSection('physics-notes')">📘 Summary Notes</button>
+      <div id="physics-notes" class="collapsible-content">
+        <a href="#" class="resource-link">Mechanics Revision Notes</a>
+        <a href="#" class="resource-link">Electricity Quick Guide</a>
+      </div>
+
+      <button class="collapsible" onclick="toggleSection('physics-examples')">✅ Worked Examples</button>
+      <div id="physics-examples" class="collapsible-content">
+        <a href="#" class="resource-link">SUVAT Problem Walkthrough</a>
+      </div>
+
+      <button class="collapsible" onclick="toggleSection('physics-spec')">📊 Spec Checklists / Maps</button>
+      <div id="physics-spec" class="collapsible-content">
+        <a href="#" class="resource-link">AQA Physics Spec Map</a>
+      </div>
+
+      <button class="collapsible" onclick="toggleSection('physics-videos')">🎥 YouTube Videos</button>
+      <div id="physics-videos" class="collapsible-content">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Computer Science Section -->
+    <section>
+      <h2>Computer Science</h2>
+      <button class="collapsible" onclick="toggleSection('cs-notes')">📘 Summary Notes</button>
+      <div id="cs-notes" class="collapsible-content">
+        <a href="#" class="resource-link">Logic Gates Guide</a>
+        <a href="#" class="resource-link">Data Structures Notes</a>
+      </div>
+
+      <button class="collapsible" onclick="toggleSection('cs-examples')">✅ Worked Examples</button>
+      <div id="cs-examples" class="collapsible-content">
+        <a href="#" class="resource-link">Dijkstra’s Algorithm Example</a>
+      </div>
+
+      <button class="collapsible" onclick="toggleSection('cs-spec')">📊 Spec Checklists / Maps</button>
+      <div id="cs-spec" class="collapsible-content">
+        <a href="#" class="resource-link">OCR Comp Sci Checklist</a>
+      </div>
+
+      <button class="collapsible" onclick="toggleSection('cs-videos')">🎥 YouTube Videos</button>
+      <div id="cs-videos" class="collapsible-content">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+      </div>
     </section>
   </main>
 
