@@ -1,87 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="images/TTlogo_semi.png" type="image/png">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TensorTutors</title>
-  <link rel="stylesheet" href="style.css" />
-  <script>
-    window.addEventListener("DOMContentLoaded", () => {
-      fetch("nav.html")
-        .then(res => res.text())
-        .then(data => {
-          document.getElementById("navbar").innerHTML = data;
-        });
-    });
-  </script>
-  <style>
-    .cta-home {
-      display: block;
-      max-width: 440px;
-      max-height: 150px;
-      margin: 2rem auto;
-      text-align: center;
-      background-color: var(--royal-blue-purple);
-      color: var(--white);
-      padding: 0.6rem 1.5rem;
-      border-radius: 10px;
-      font-size: 1rem;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background-color 0.2s ease;
-    }
-
-
-    .cta-home:hover {
-      background-color: var(--medium-periwinkle);
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TensorTutors – Master STEM with Expert Support</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <div id="navbar"></div>
-
-  <header class="hero">
-    <h1>TensorTutors</h1>
-    <p class="subtitle">Your gateway to mastering STEM — with expert support and real results.</p>
+  <!-- Site Header / Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">TensorTutors</a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="tutors.html">Tutors</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <a href="resources.html" class="cta-home" style="text-align: center; display: block;">Start Learning</a>
-
-    <div style="height: 1rem;"></div> <!-- GAP -->
-
-    <section class="card">
-      <h2>Subjects We Offer</h2>
-      <ul>
-        <li><strong>Mathematics</strong> – From core concepts to exam strategies</li>
-        <li><strong>Physics</strong> – Build intuition and master problem-solving</li>
-        <li><strong>Computer Science</strong> – Logic, programming, and algorithms</li>
-      </ul>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-content">
+        <h1>Master GCSE &amp; A‑Level STEM with 1‑on‑1 Experts</h1>
+        <p>Free topic maps, worked examples, and personalized tutoring to supercharge your grades.</p>
+        <div class="hero-ctas">
+          <a href="resources.html" class="btn btn-primary">Browse Free Resources</a>
+          <a href="tutors.html" class="btn btn-outline">Book a Tutor</a>
+        </div>
+      </div>
     </section>
 
-    <section class="card">
-      <h2>Meet the Tutors</h2>
-      <p>Max, Jack, and Apoorva are passionate educators with top academic backgrounds, offering personalised support for GCSE and A-Level students. We’re here to help you grow your confidence and boost your grades — no matter your starting point.</p>
+    <!-- Key Benefits -->
+    <section class="benefits">
+      <div class="container grid grid-3">
+        <div class="benefit">
+          <img src="/icons/checklist.svg" alt="Checklist icon">
+          <h3>Exam‑Board Checklists</h3>
+          <p>Track every topic you need for your exam.</p>
+        </div>
+        <div class="benefit">
+          <img src="/icons/solutions.svg" alt="Solutions icon">
+          <h3>Worked Examples</h3>
+          <p>Step‑by‑step solutions to build your confidence.</p>
+        </div>
+        <div class="benefit">
+          <img src="/icons/tutor.svg" alt="Tutor icon">
+          <h3>1‑on‑1 Tutoring</h3>
+          <p>Personalized sessions with STEM experts.</p>
+        </div>
+      </div>
     </section>
 
-    <section class="card">
-      <h2>What Else?</h2>
-      <ul>
-        <li><strong>🎥 YouTube Videos:</strong> Weekly explainers, walkthroughs, and revision sessions.</li>
-        <li><strong>💬 Weekly Discussion Groups:</strong> Free online drop-ins for questions, support, and shared problem-solving.</li>
-      </ul>
+    <!-- Subjects We Offer -->
+    <section class="subjects">
+      <div class="container">
+        <h2>Subjects We Offer</h2>
+        <div class="cards grid auto-fit">
+          <a href="resources.html#maths" class="tile">
+            <img src="/icons/math.svg" alt="Math icon">
+            <h3>Mathematics</h3>
+            <p>Core concepts to advanced problem‑solving</p>
+          </a>
+          <a href="resources.html#physics" class="tile">
+            <img src="/icons/physics.svg" alt="Physics icon">
+            <h3>Physics</h3>
+            <p>Build intuition and master your exams</p>
+          </a>
+          <a href="resources.html#computer-science" class="tile">
+            <img src="/icons/cs.svg" alt="Computer Science icon">
+            <h3>Computer Science</h3>
+            <p>Logic, algorithms, and programming</p>
+          </a>
+          <a href="resources.html#chemistry" class="tile">
+            <img src="/icons/chemistry.svg" alt="Chemistry icon">
+            <h3>Chemistry</h3>
+            <p>From atoms to organic reactions</p>
+          </a>
+          <a href="resources.html#biology" class="tile">
+            <img src="/icons/biology.svg" alt="Biology icon">
+            <h3>Biology</h3>
+            <p>Cell structure, genetics, and ecology</p>
+          </a>
+        </div>
+      </div>
     </section>
 
-    <section class="card">
-      <h2>Contact Us</h2>
-      <p>Reach out at <a href="mailto:contact@tensortutors.com">contact@tensortutors.com</a></p>
+    <!-- How It Works -->
+    <section class="how-it-works">
+      <div class="container">
+        <h2>How It Works</h2>
+        <div class="grid grid-3">
+          <div class="step">
+            <img src="/icons/download.svg" alt="Download icon">
+            <h4>1. Get Free Resources</h4>
+            <p>Download topic summaries, videos, and checklists.</p>
+          </div>
+          <div class="step">
+            <img src="/icons/calendar.svg" alt="Calendar icon">
+            <h4>2. Book a Session</h4>
+            <p>Schedule 1‑on‑1 tutoring with our expert team.</p>
+          </div>
+          <div class="step">
+            <img src="/icons/progress.svg" alt="Progress icon">
+            <h4>3. Track Your Progress</h4>
+            <p>Monitor your scores and refine your revision.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+      <div class="container">
+        <h2>What Our Students Say</h2>
+        <div class="testimonial-slider">
+          <blockquote>
+            “I jumped from a C to an A* in Further Maths in just 3 months!”
+            <cite>– Sarah, A* Maths Student</cite>
+          </blockquote>
+          <blockquote>
+            “The worked solutions helped me ace my Physics paper.”
+            <cite>– Jamal, A-Level Physics</cite>
+          </blockquote>
+          <blockquote>
+            “The checklists kept my revision on track every step of the way.”
+            <cite>– Aisha, GCSE Student</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Free Resource -->
+    <section class="featured-resource">
+      <div class="container featured-inner">
+        <div class="resource-media">
+          <img src="/images/sample-solution-thumbnail.jpg" alt="Sample Solution">
+        </div>
+        <div class="resource-info">
+          <h2>Featured Free Resource</h2>
+          <p>Download our popular GCSE Maths worked example on quadratic equations.</p>
+          <a href="resources.html#quadratics" class="btn btn-primary">Get the Worked Example</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tutor Spotlight -->
+    <section class="tutor-spotlight">
+      <div class="container">
+        <h2>Meet Our Top Tutor</h2>
+        <div class="card tutor-card">
+          <div class="tutor-photo">
+            <img src="/images/tutor-patel.jpg" alt="Dr Patel">
+          </div>
+          <div class="tutor-bio">
+            <h3>Dr. Priya Patel</h3>
+            <p>PhD in Theoretical Physics with 10+ years of tutoring experience. Specializes in A-Level Physics & Maths.</p>
+            <a href="tutors.html#patel" class="btn btn-outline">Book a Session</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lead Capture -->
+    <section class="lead-capture">
+      <div class="container">
+        <h2>Join Our Community</h2>
+        <p>Sign up for exclusive tips, free checklists, and early access to new resources.</p>
+        <form action="#" class="signup-form">
+          <input type="email" name="email" placeholder="Your email address" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 TensorTutors</p>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container grid grid-3 footer-inner">
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="resources.html#maths">Mathematics</a></li>
+          <li><a href="resources.html#physics">Physics</a></li>
+          <li><a href="resources.html#cs">Computer Science</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="tutors.html">Our Tutors</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul class="social-icons">
+          <li><a href="#"><img src="/icons/facebook.svg" alt="Facebook"></a></li>
+          <li><a href="#"><img src="/icons/twitter.svg" alt="Twitter"></a></li>
+          <li><a href="#"><img src="/icons/instagram.svg" alt="Instagram"></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2024 TensorTutors. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>
