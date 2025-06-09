@@ -6,6 +6,40 @@
   <title>Resources | TensorTutors</title>
   <link rel="stylesheet" href="style.css" />
   <style>
+    .accordion-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--pale-lavender-grey);
+    }
+
+    .accordion-header h2 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: var(--royal-blue-purple);
+    }
+
+    .accordion-content {
+      display: none;
+      margin-top: 1rem;
+    }
+
+    .accordion.open .accordion-content {
+      display: block;
+    }
+
+    .arrow {
+      font-size: 1.2rem;
+      transition: transform 0.3s ease;
+      color: var(--very-dark-indigo);
+    }
+
+    .accordion.open .arrow {
+      transform: rotate(180deg);
+    }
+
     .collapse-button {
       background-color: var(--royal-blue-purple);
       color: var(--white);
@@ -55,79 +89,90 @@
 
   <main>
     <!-- Maths -->
-    <section class="card" id="maths">
-      <h2>Maths</h2>
-      <button class="collapse-button" data-target="maths-notes">📘 Summary Notes</button>
-      <div class="collapse-content" id="maths-notes">
-        <a href="#" class="resource-link">Algebra Notes (PDF)</a>
-        <a href="#" class="resource-link">Calculus Guide (PDF)</a>
+    <section class="card accordion">
+      <div class="accordion-header" data-target="maths-content">
+        <h2>Maths</h2>
+        <span class="arrow">▼</span>
       </div>
+      <div class="accordion-content" id="maths-content">
+        <button class="collapse-button" data-target="maths-notes">📘 Summary Notes</button>
+        <div class="collapse-content" id="maths-notes">
+          <a href="#" class="resource-link">Algebra Notes (PDF)</a>
+          <a href="#" class="resource-link">Calculus Guide (PDF)</a>
+        </div>
 
-      <button class="collapse-button" data-target="maths-examples">✅ Worked Examples</button>
-      <div class="collapse-content" id="maths-examples">
-        <a href="#" class="resource-link">Differentiation Example</a>
-        <a href="#" class="resource-link">Trigonometric Identities</a>
-      </div>
+        <button class="collapse-button" data-target="maths-examples">✅ Worked Examples</button>
+        <div class="collapse-content" id="maths-examples">
+          <a href="#" class="resource-link">Differentiation Example</a>
+        </div>
 
-      <button class="collapse-button" data-target="maths-checklists">📊 Spec Checklists / Topic Maps</button>
-      <div class="collapse-content" id="maths-checklists">
-        <a href="#" class="resource-link">A-Level Maths Checklist</a>
-        <a href="#" class="resource-link">Topic Map (Pure Maths)</a>
-      </div>
+        <button class="collapse-button" data-target="maths-checklists">📊 Spec Checklists / Topic Maps</button>
+        <div class="collapse-content" id="maths-checklists">
+          <a href="#" class="resource-link">A-Level Maths Checklist</a>
+        </div>
 
-      <button class="collapse-button" data-target="maths-videos">🎥 YouTube Videos</button>
-      <div class="collapse-content" id="maths-videos">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        <button class="collapse-button" data-target="maths-videos">🎥 YouTube Videos</button>
+        <div class="collapse-content" id="maths-videos">
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        </div>
       </div>
     </section>
 
     <!-- Physics -->
-    <section class="card" id="physics">
-      <h2>Physics</h2>
-      <button class="collapse-button" data-target="physics-notes">📘 Summary Notes</button>
-      <div class="collapse-content" id="physics-notes">
-        <a href="#" class="resource-link">Mechanics Notes</a>
-        <a href="#" class="resource-link">Waves Revision Sheet</a>
+    <section class="card accordion">
+      <div class="accordion-header" data-target="physics-content">
+        <h2>Physics</h2>
+        <span class="arrow">▼</span>
       </div>
+      <div class="accordion-content" id="physics-content">
+        <button class="collapse-button" data-target="physics-notes">📘 Summary Notes</button>
+        <div class="collapse-content" id="physics-notes">
+          <a href="#" class="resource-link">Mechanics Notes</a>
+        </div>
 
-      <button class="collapse-button" data-target="physics-examples">✅ Worked Examples</button>
-      <div class="collapse-content" id="physics-examples">
-        <a href="#" class="resource-link">Projectile Motion Problem</a>
-      </div>
+        <button class="collapse-button" data-target="physics-examples">✅ Worked Examples</button>
+        <div class="collapse-content" id="physics-examples">
+          <a href="#" class="resource-link">Projectile Motion Problem</a>
+        </div>
 
-      <button class="collapse-button" data-target="physics-checklists">📊 Spec Checklists / Topic Maps</button>
-      <div class="collapse-content" id="physics-checklists">
-        <a href="#" class="resource-link">AQA Physics Checklist</a>
-      </div>
+        <button class="collapse-button" data-target="physics-checklists">📊 Spec Checklists / Topic Maps</button>
+        <div class="collapse-content" id="physics-checklists">
+          <a href="#" class="resource-link">AQA Physics Checklist</a>
+        </div>
 
-      <button class="collapse-button" data-target="physics-videos">🎥 YouTube Videos</button>
-      <div class="collapse-content" id="physics-videos">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        <button class="collapse-button" data-target="physics-videos">🎥 YouTube Videos</button>
+        <div class="collapse-content" id="physics-videos">
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        </div>
       </div>
     </section>
 
     <!-- Computer Science -->
-    <section class="card" id="cs">
-      <h2>Computer Science</h2>
-      <button class="collapse-button" data-target="cs-notes">📘 Summary Notes</button>
-      <div class="collapse-content" id="cs-notes">
-        <a href="#" class="resource-link">Data Structures Overview</a>
-        <a href="#" class="resource-link">System Architecture Notes</a>
+    <section class="card accordion">
+      <div class="accordion-header" data-target="cs-content">
+        <h2>Computer Science</h2>
+        <span class="arrow">▼</span>
       </div>
+      <div class="accordion-content" id="cs-content">
+        <button class="collapse-button" data-target="cs-notes">📘 Summary Notes</button>
+        <div class="collapse-content" id="cs-notes">
+          <a href="#" class="resource-link">System Architecture Notes</a>
+        </div>
 
-      <button class="collapse-button" data-target="cs-examples">✅ Worked Examples</button>
-      <div class="collapse-content" id="cs-examples">
-        <a href="#" class="resource-link">Trace Table Example</a>
-      </div>
+        <button class="collapse-button" data-target="cs-examples">✅ Worked Examples</button>
+        <div class="collapse-content" id="cs-examples">
+          <a href="#" class="resource-link">Trace Table Example</a>
+        </div>
 
-      <button class="collapse-button" data-target="cs-checklists">📊 Spec Checklists / Topic Maps</button>
-      <div class="collapse-content" id="cs-checklists">
-        <a href="#" class="resource-link">OCR Comp Sci Checklist</a>
-      </div>
+        <button class="collapse-button" data-target="cs-checklists">📊 Spec Checklists / Topic Maps</button>
+        <div class="collapse-content" id="cs-checklists">
+          <a href="#" class="resource-link">OCR Comp Sci Checklist</a>
+        </div>
 
-      <button class="collapse-button" data-target="cs-videos">🎥 YouTube Videos</button>
-      <div class="collapse-content" id="cs-videos">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        <button class="collapse-button" data-target="cs-videos">🎥 YouTube Videos</button>
+        <div class="collapse-content" id="cs-videos">
+          <iframe width="100%" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        </div>
       </div>
     </section>
   </main>
@@ -136,46 +181,42 @@
     <p>&copy; 2025 TensorTutors</p>
   </footer>
 
- <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    // Navbar load
-    fetch("nav.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("navbar").innerHTML = data;
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Load navbar
+      fetch("nav.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("navbar").innerHTML = data;
+        });
+
+      // Accordion subject sections
+      const headers = document.querySelectorAll(".accordion-header");
+      headers.forEach(header => {
+        header.addEventListener("click", () => {
+          const parent = header.parentElement;
+          const isOpen = parent.classList.contains("open");
+
+          document.querySelectorAll(".accordion").forEach(acc => acc.classList.remove("open"));
+
+          if (!isOpen) {
+            parent.classList.add("open");
+          }
+        });
       });
 
-    // Accordion toggle logic
-    const accordions = document.querySelectorAll(".accordion-header");
-
-    accordions.forEach(header => {
-      header.addEventListener("click", () => {
-        const parent = header.parentElement;
-        const isOpen = parent.classList.contains("open");
-
-        // Close all
-        document.querySelectorAll(".accordion").forEach(acc => acc.classList.remove("open"));
-
-        // Toggle current
-        if (!isOpen) {
-          parent.classList.add("open");
-        }
-      });
-    });
-
-    // Toggle internal buttons inside open card
-    const collapseButtons = document.querySelectorAll(".collapse-button");
-    collapseButtons.forEach(button => {
-      const targetId = button.dataset.target;
-      button.addEventListener("click", () => {
-        const content = document.getElementById(targetId);
-        if (content) {
-          content.style.display = content.style.display === "block" ? "none" : "block";
-        }
+      // Internal collapse toggles
+      const collapseButtons = document.querySelectorAll(".collapse-button");
+      collapseButtons.forEach(button => {
+        const targetId = button.dataset.target;
+        button.addEventListener("click", () => {
+          const content = document.getElementById(targetId);
+          if (content) {
+            content.style.display = content.style.display === "block" ? "none" : "block";
+          }
+        });
       });
     });
-  });
-</script>
-
+  </script>
 </body>
 </html>
