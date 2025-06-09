@@ -136,27 +136,46 @@
     <p>&copy; 2025 TensorTutors</p>
   </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      // Toggle navbar
-      fetch("nav.html")
-        .then(res => res.text())
-        .then(data => {
-          document.getElementById("navbar").innerHTML = data;
-        });
+ <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Navbar load
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+      });
 
-      // Toggle collapsibles
-      const buttons = document.querySelectorAll('.collapse-button');
-      buttons.forEach(button => {
-        const targetId = button.dataset.target;
-        button.addEventListener('click', () => {
-          const content = document.getElementById(targetId);
-          if (content) {
-            content.style.display = content.style.display === 'block' ? 'none' : 'block';
-          }
-        });
+    // Accordion toggle logic
+    const accordions = document.querySelectorAll(".accordion-header");
+
+    accordions.forEach(header => {
+      header.addEventListener("click", () => {
+        const parent = header.parentElement;
+        const isOpen = parent.classList.contains("open");
+
+        // Close all
+        document.querySelectorAll(".accordion").forEach(acc => acc.classList.remove("open"));
+
+        // Toggle current
+        if (!isOpen) {
+          parent.classList.add("open");
+        }
       });
     });
-  </script>
+
+    // Toggle internal buttons inside open card
+    const collapseButtons = document.querySelectorAll(".collapse-button");
+    collapseButtons.forEach(button => {
+      const targetId = button.dataset.target;
+      button.addEventListener("click", () => {
+        const content = document.getElementById(targetId);
+        if (content) {
+          content.style.display = content.style.display === "block" ? "none" : "block";
+        }
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
