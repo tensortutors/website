@@ -3,24 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resources | TensorTutors</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Free Resources | TensorTutors</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      fetch("../nav.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("navbar").innerHTML = data;
+        });
+    });
+  </script>
 </head>
 <body>
   <div id="navbar"></div>
 
-  <header>
-    <h1>📚 Resources</h1>
-    <p>Explore everything we offer to support your learning journey.</p>
-  </header>
-
   <main>
-    <ul>
-      <li><a href="resources/free.html">📄 Free Resources</a></li>
-      <li><a href="resources/premium.html">💰 Premium Packs</a></li>
-      <li><a href="resources/checklists.html">✅ Checklists</a></li>
-      <li><a href="resources/videos.html">🎥 YouTube Explainers</a></li>
-    </ul>
+    <section class="hero">
+      <h1>📄 Free Resources</h1>
+      <p class="subtitle">Concise notes, worked examples, and more – all available for free.</p>
+    </section>
+
+    <section>
+      <div class="card">📘 <strong>Notes:</strong> Topic summary PDFs (coming soon)</div>
+      <div class="card">🧠 <strong>Worked Examples:</strong> Step-by-step solutions to exam-style questions</div>
+      <div class="card">🎥 <strong>Video Links:</strong> Watch explainer videos on our <a href="../youtube.html">YouTube channel</a></div>
+    </section>
   </main>
 
   <footer>
