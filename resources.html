@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Resources - Tensor Tutors</title>
-  <link rel="stylesheet" href="style.css">
-  <script>
-    fetch("nav.html")
-      .then(res => res.text())
-      .then(data => document.getElementById("navbar").innerHTML = data);
-  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources | TensorTutors</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div id="navbar"></div>
+
+  <header>
+    <h1>📚 Resources</h1>
+    <p>Explore everything we offer to support your learning journey.</p>
+  </header>
+
   <main>
-    <h1>Resources</h1>
-    <p>Find flashcards, revision materials, and more.</p>
+    <ul>
+      <li><a href="resources/free.html">📄 Free Resources</a></li>
+      <li><a href="resources/premium.html">💰 Premium Packs</a></li>
+      <li><a href="resources/checklists.html">✅ Checklists</a></li>
+      <li><a href="resources/videos.html">🎥 YouTube Explainers</a></li>
+    </ul>
   </main>
+
+  <footer>
+    <p>&copy; 2025 TensorTutors</p>
+  </footer>
 </body>
 </html>

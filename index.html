@@ -17,67 +17,8 @@
     });
   </script>
 </head>
+
 <body>
 
   <!-- Top Navigation Bar -->
   <div id="navbar"></div>
-
-  <!-- Page Content -->
-  <main>
-    <header class="hero">
-      <div class="hero-content">
-        <h1>Welcome to TensorTutors</h1>
-        <p class="subtitle">Expert tuition in Maths, Physics & Computer Science</p>
-      </div>
-    </header>
-
-    <!-- What We Offer Section -->
-    <section class="card">
-      <h2>What We Offer</h2>
-      <ul>
-        <li><strong>Mathematics</strong> – from core concepts to exam strategies</li>
-        <li><strong>Physics</strong> – build intuition and master problem-solving</li>
-        <li><strong>Computer Science</strong> – logic, programming, and algorithms</li>
-        <li><strong>Discussions</strong> – free weekly online meetings for all our members, topic list coming soon!</li>
-      </ul>
-    </section>
-
-    <!-- Meet the Tutors -->
-    <section class="card">
-      <h2>Meet the Tutors</h2>
-      <p>Max, Jack, and Apoorva are passionate tutors with top academic backgrounds, offering personalised support for GCSE and A-Level students.</p>
-    </section>
-
-    <!-- Contact -->
-    <section class="card">
-      <h2>Contact Us</h2>
-      <p>Email us at <a href="mailto:contact@tensortutors.com">contact@tensortutors.com</a></p>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 TensorTutors. All rights reserved.</p>
-  </footer>
-
-  <script>
-  window.addEventListener("DOMContentLoaded", () => {
-    fetch("nav.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("navbar").innerHTML = data;
-
-        // Now bind the toggle AFTER injection
-        const toggle = document.getElementById('nav-toggle');
-        const nav = document.getElementById('nav-list');
-        if (toggle && nav) {
-          toggle.addEventListener('click', () => {
-            nav.classList.toggle('show-nav');
-          });
-        }
-      });
-  });
-</script>
-
-</body>
-</html>
