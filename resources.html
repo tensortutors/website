@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="images/TTlogo_semi.png" type="image/png" />
   <style>
+    /* Accordion headers */
     .accordion-header {
       display: flex;
       justify-content: space-between;
@@ -15,43 +16,39 @@
       padding-bottom: 0.5rem;
       border-bottom: 1px solid var(--pale-lavender-grey);
     }
-
     .accordion-header h2 {
       margin: 0;
       font-size: 1.5rem;
       color: var(--royal-blue-purple);
     }
-
-    .accordion-content {
-      display: none;
-      margin-top: 1rem;
-    }
-
-    .accordion.open .accordion-content {
-      display: block;
-    }
-
     .arrow {
       font-size: 1.2rem;
       transition: transform 0.3s ease;
       color: var(--very-dark-indigo);
     }
 
+    /* Accordion content hidden by default */
+    .accordion-content {
+      display: none;
+      margin-top: 1rem;
+    }
+    .accordion.open .accordion-content {
+      display: block;
+    }
     .accordion.open .arrow {
       transform: rotate(180deg);
     }
 
+    /* Two-column layout */
     .resource-columns {
       display: flex;
       gap: 2rem;
       flex-wrap: wrap;
     }
-
     .resource-column {
       flex: 1;
-      min-width: 300px;
+      min-width: 280px;
     }
-
     .resource-column h3 {
       font-size: 1.2rem;
       color: var(--royal-blue-purple);
@@ -59,6 +56,7 @@
       margin-bottom: 0.5rem;
     }
 
+    /* Inner collapsibles */
     .collapse-button {
       background-color: var(--royal-blue-purple);
       color: var(--white);
@@ -72,17 +70,16 @@
       width: 100%;
       text-align: left;
     }
-
     .collapse-button:hover {
       background-color: var(--medium-periwinkle);
     }
-
     .collapse-content {
       display: none;
       margin-top: 0.5rem;
       padding-left: 1rem;
     }
 
+    /* Resource links */
     .resource-link {
       display: block;
       margin: 0.5rem 0;
@@ -90,7 +87,6 @@
       color: var(--very-dark-indigo);
       font-weight: 500;
     }
-
     .resource-link:hover {
       text-decoration: underline;
       color: var(--royal-blue-purple);
@@ -103,58 +99,179 @@
 
   <header class="hero">
     <h1>Resources</h1>
-    <p class="subtitle">Explore free and premium resources to boost your learning.</p>
+    <p class="subtitle">Explore free and premium materials to boost your STEM skills.</p>
   </header>
 
   <main>
     <!-- Maths -->
     <section class="card accordion">
       <div class="accordion-header">
-        <h2>Maths</h2>
+        <h2>Mathematics</h2>
         <span class="arrow">▼</span>
       </div>
       <div class="accordion-content">
         <div class="resource-columns">
-          <!-- Free Resources -->
+          <!-- Free -->
           <div class="resource-column">
             <h3>🎓 Free Resources</h3>
             <button class="collapse-button" data-target="maths-free-notes">📘 Summary Notes</button>
             <div class="collapse-content" id="maths-free-notes">
-              <a href="#" class="resource-link">Algebra Basics</a>
-              <a href="#" class="resource-link">Trigonometry Overview</a>
+              <a href="#" class="resource-link">Algebra Basics (PDF)</a>
+              <a href="#" class="resource-link">Trigonometry Overview (PDF)</a>
             </div>
-
             <button class="collapse-button" data-target="maths-free-examples">✅ Worked Examples</button>
             <div class="collapse-content" id="maths-free-examples">
-              <a href="#" class="resource-link">Differentiation Steps</a>
+              <a href="#" class="resource-link">Differentiation Example</a>
+              <a href="#" class="resource-link">Binomial Expansion</a>
             </div>
-
             <button class="collapse-button" data-target="maths-free-videos">🎥 YouTube Videos</button>
             <div class="collapse-content" id="maths-free-videos">
-              <iframe width="100%" height="250" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+              <iframe width="100%" height="200" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
             </div>
           </div>
-
-          <!-- Paid Resources -->
+          <!-- Paid -->
           <div class="resource-column">
             <h3>💼 Paid Resources</h3>
             <button class="collapse-button" data-target="maths-paid-packs">📦 Premium Packs</button>
             <div class="collapse-content" id="maths-paid-packs">
-              <a href="#" class="resource-link">Full A-Level Revision Pack</a>
-              <a href="#" class="resource-link">Topic-by-topic Exam Booklets</a>
+              <a href="#" class="resource-link">A-Level Full Revision Pack</a>
+              <a href="#" class="resource-link">Topic-by-Topic Exam Booklets</a>
             </div>
-
             <button class="collapse-button" data-target="maths-paid-checklists">📊 Advanced Checklists</button>
             <div class="collapse-content" id="maths-paid-checklists">
-              <a href="#" class="resource-link">OCR + Edexcel Cross-Spec Map</a>
+              <a href="#" class="resource-link">OCR + Edexcel Spec Map</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- You can replicate the above structure for Physics and CS -->
+    <!-- Further Maths -->
+    <section class="card accordion">
+      <div class="accordion-header">
+        <h2>Further Mathematics</h2>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="accordion-content">
+        <div class="resource-columns">
+          <!-- Free -->
+          <div class="resource-column">
+            <h3>🎓 Free Resources</h3>
+            <button class="collapse-button" data-target="fm-free-notes">📘 Summary Notes</button>
+            <div class="collapse-content" id="fm-free-notes">
+              <a href="#" class="resource-link">Complex Numbers Guide</a>
+              <a href="#" class="resource-link">Matrix Algebra Overview</a>
+            </div>
+            <button class="collapse-button" data-target="fm-free-examples">✅ Worked Examples</button>
+            <div class="collapse-content" id="fm-free-examples">
+              <a href="#" class="resource-link">Eigenvalues Problem</a>
+              <a href="#" class="resource-link">Contour Integration</a>
+            </div>
+            <button class="collapse-button" data-target="fm-free-videos">🎥 YouTube Videos</button>
+            <div class="collapse-content" id="fm-free-videos">
+              <iframe width="100%" height="200" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+          <!-- Paid -->
+          <div class="resource-column">
+            <h3>💼 Paid Resources</h3>
+            <button class="collapse-button" data-target="fm-paid-packs">📦 Premium Packs</button>
+            <div class="collapse-content" id="fm-paid-packs">
+              <a href="#" class="resource-link">Further Maths Full Revision Pack</a>
+              <a href="#" class="resource-link">Exam-style Problem Sets</a>
+            </div>
+            <button class="collapse-button" data-target="fm-paid-checklists">📊 Advanced Checklists</button>
+            <div class="collapse-content" id="fm-paid-checklists">
+              <a href="#" class="resource-link">Further Maths Spec Map</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Physics -->
+    <section class="card accordion">
+      <div class="accordion-header">
+        <h2>Physics</h2>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="accordion-content">
+        <div class="resource-columns">
+          <!-- Free -->
+          <div class="resource-column">
+            <h3>🎓 Free Resources</h3>
+            <button class="collapse-button" data-target="physics-free-notes">📘 Summary Notes</button>
+            <div class="collapse-content" id="physics-free-notes">
+              <a href="#" class="resource-link">Mechanics Revision (PDF)</a>
+              <a href="#" class="resource-link">Electricity Quick Guide</a>
+            </div>
+            <button class="collapse-button" data-target="physics-free-examples">✅ Worked Examples</button>
+            <div class="collapse-content" id="physics-free-examples">
+              <a href="#" class="resource-link">Projectile Motion Walkthrough</a>
+            </div>
+            <button class="collapse-button" data-target="physics-free-videos">🎥 YouTube Videos</button>
+            <div class="collapse-content" id="physics-free-videos">
+              <iframe width="100%" height="200" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+          <!-- Paid -->
+          <div class="resource-column">
+            <h3>💼 Paid Resources</h3>
+            <button class="collapse-button" data-target="physics-paid-packs">📦 Premium Packs</button>
+            <div class="collapse-content" id="physics-paid-packs">
+              <a href="#" class="resource-link">A-Level Physics Revision Pack</a>
+              <a href="#" class="resource-link">Practical Lab Worksheets</a>
+            </div>
+            <button class="collapse-button" data-target="physics-paid-checklists">📊 Advanced Checklists</button>
+            <div class="collapse-content" id="physics-paid-checklists">
+              <a href="#" class="resource-link">Physics Spec Topic Map</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Computer Science -->
+    <section class="card accordion">
+      <div class="accordion-header">
+        <h2>Computer Science</h2>
+        <span class="arrow">▼</span>
+      </div>
+      <div class="accordion-content">
+        <div class="resource-columns">
+          <!-- Free -->
+          <div class="resource-column">
+            <h3>🎓 Free Resources</h3>
+            <button class="collapse-button" data-target="cs-free-notes">📘 Summary Notes</button>
+            <div class="collapse-content" id="cs-free-notes">
+              <a href="#" class="resource-link">Data Structures Overview</a>
+              <a href="#" class="resource-link">Logic Gates Guide</a>
+            </div>
+            <button class="collapse-button" data-target="cs-free-examples">✅ Worked Examples</button>
+            <div class="collapse-content" id="cs-free-examples">
+              <a href="#" class="resource-link">Trace Table Example</a>
+            </div>
+            <button class="collapse-button" data-target="cs-free-videos">🎥 YouTube Videos</button>
+            <div class="collapse-content" id="cs-free-videos">
+              <iframe width="100%" height="200" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+          <!-- Paid -->
+          <div class="resource-column">
+            <h3>💼 Paid Resources</h3>
+            <button class="collapse-button" data-target="cs-paid-packs">📦 Premium Packs</button>
+            <div class="collapse-content" id="cs-paid-packs">
+              <a href="#" class="resource-link">Full CS Revision Bundle</a>
+              <a href="#" class="resource-link">Exam-Style Problem Set</a>
+            </div>
+            <button class="collapse-button" data-target="cs-paid-checklists">📊 Advanced Checklists</button>
+            <div class="collapse-content" id="cs-paid-checklists">
+              <a href="#" class="resource-link">Comp Sci Spec Map</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -163,30 +280,25 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
+      // Load navbar
       fetch("nav.html")
         .then(res => res.text())
-        .then(data => {
-          document.getElementById("navbar").innerHTML = data;
-        });
+        .then(html => document.getElementById("navbar").innerHTML = html);
 
-      // Accordion section toggle
-      const headers = document.querySelectorAll(".accordion-header");
-      headers.forEach(header => {
+      // Accordion toggle
+      document.querySelectorAll(".accordion-header").forEach(header => {
         header.addEventListener("click", () => {
-          const parent = header.closest(".accordion");
-          const isOpen = parent.classList.contains("open");
-
-          document.querySelectorAll(".accordion").forEach(a => a.classList.remove("open"));
-          if (!isOpen) parent.classList.add("open");
+          const card = header.closest(".accordion");
+          const open = card.classList.contains("open");
+          document.querySelectorAll(".accordion").forEach(acc => acc.classList.remove("open"));
+          if (!open) card.classList.add("open");
         });
       });
 
-      // Collapse toggle for each resource set
-      const buttons = document.querySelectorAll(".collapse-button");
-      buttons.forEach(button => {
-        const targetId = button.dataset.target;
-        button.addEventListener("click", () => {
-          const content = document.getElementById(targetId);
+      // Inner collapse toggles
+      document.querySelectorAll(".collapse-button").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const content = document.getElementById(btn.dataset.target);
           if (content) {
             content.style.display = content.style.display === "block" ? "none" : "block";
           }
