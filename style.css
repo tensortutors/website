@@ -198,3 +198,38 @@ footer {
   color: var(--white);
   font-size: 0.9rem;
 }
+
+/* ===== Accordion Cards ===== */
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--pale-lavender-grey);
+}
+
+.accordion-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.accordion-content {
+  display: none;
+  margin-top: 1rem;
+}
+
+.arrow {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.accordion.open .accordion-content {
+  display: block;
+}
+
+.accordion.open .arrow {
+  transform: rotate(180deg);
+}
+
