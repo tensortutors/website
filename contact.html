@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tutoring - Tensor Tutors</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("navbar").innerHTML = data);
+  </script>
+</head>
+<body>
+  <div id="navbar"></div>
+  <main>
+    <h1>Tutoring Services</h1>
+    <p>Our offerings and how to book sessions.</p>
+  </main>
+</body>
+</html>
