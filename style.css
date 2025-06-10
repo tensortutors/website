@@ -294,3 +294,26 @@ footer {
     padding: 0.75rem 1rem;
   }
 }
+
+/* ==== Mobile logo & dropdown fixes ==== */
+@media (max-width: 768px) {
+  /* 1) Force the small logo to stay visible & give it some height */
+  .logo-small {
+    display: block;
+    /* match your original navbar height */
+    height: 60px;
+    width: 60px;
+    margin: 0.5rem 0;
+  }
+
+  /* 2) Darken the dropdown container when it’s open */
+  .nav-list.show-nav {
+    /* slightly darker than your --very-dark-indigo (#110E59) */
+    background-color: #0d0b4a;
+  }
+  /* make individual links transparent so the container shows through */
+  .nav-list.show-nav li a {
+    background-color: transparent;
+  }
+}
+
