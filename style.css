@@ -25,40 +25,54 @@ body {
   margin: 0;
 }
 
-/* === NAVBAR LAYOUT === */
+/* === Navbar Layout === */
 .navbar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: flex-end;
   background-color: var(--very-dark-indigo);
-  padding: 1em 2em;
+  padding: 1rem 2rem;
   border-bottom: 4px solid var(--royal-blue-purple);
   position: sticky;
   top: 0;
   z-index: 1000;
-  flex-wrap: wrap;
 }
-
 .nav-left {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 1rem;
 }
-
 .logo-small {
   background: url('images/TTlogo_semi.png') no-repeat center center;
   background-size: contain;
   height: 40px;
   width: 40px;
 }
-
 .nav-title {
   color: var(--white);
   font-size: 1.5rem;
   font-weight: bold;
-  line-height: 1;
+}
+.nav-list {
   display: flex;
-  align-items: center;
+  width: 60%;
+  justify-content: space-between;
+}
+.nav-list li {
+  list-style: none;
+}
+.nav-list li a {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--medium-periwinkle);
+  border-radius: 8px;
+  color: var(--white);
+  font-weight: bold;
+  transition: background 0.2s ease;
+  text-decoration: none;
+}
+.nav-list li a:hover {
+  background-color: var(--muted-lavender-blue);
 }
 
 /* === NAV TOGGLE (MOBILE) === */
@@ -71,50 +85,26 @@ body {
   display: none;
 }
 
-/* === NAV LINKS === */
-.nav-list {
-  list-style: none;
-  display: flex;
-  gap: 1.5em;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-list li a {
-  color: var(--white);
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.2s ease;
-}
-
-.nav-list li a:hover {
-  color: var(--muted-lavender-blue);
-}
-
 /* === RESPONSIVE BEHAVIOUR === */
 @media (max-width: 768px) {
   .nav-toggle {
     display: block;
   }
-
   .nav-list {
     display: none;
     width: 100%;
     flex-direction: column;
     margin-top: 1em;
   }
-
   .nav-list.show-nav {
     display: flex;
   }
-
   .nav-list li {
     text-align: left;
     padding: 0.5em 0;
   }
-
   .navbar {
+    flex-direction: column;
     align-items: flex-start;
   }
 }
@@ -125,16 +115,15 @@ body {
   text-align: center;
   background: var(--white);
 }
-
 .hero h1 {
   font-size: 2.5rem;
   color: var(--royal-blue-purple);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
-
 .subtitle {
   font-size: 1.2rem;
   color: var(--very-dark-indigo);
+  margin-bottom: 2rem;
 }
 
 /* ===== Buttons ===== */
@@ -146,19 +135,20 @@ body {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-align: center;
 }
-
 .btn-primary {
   background-color: var(--royal-blue-purple);
   color: var(--white);
   border: none;
 }
-
 .btn-outline {
   background-color: transparent;
   color: var(--royal-blue-purple);
   border: 2px solid var(--royal-blue-purple);
 }
-
+.btn.large {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
 .btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 16px rgba(17, 14, 89, 0.12);
@@ -169,6 +159,17 @@ main {
   max-width: 1000px;
   margin: auto;
   padding: 2rem 1rem;
+}
+
+/* ===== Benefits Container ===== */
+.benefits-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.benefits-container .card {
+  flex: 1;
 }
 
 /* ===== Card Sections ===== */
@@ -182,7 +183,6 @@ main {
   box-shadow: 0 8px 16px rgba(17, 14, 89, 0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 24px rgba(17, 14, 89, 0.12);
@@ -195,24 +195,10 @@ h2 {
   margin-bottom: 1rem;
 }
 
-ul {
-  padding-left: 1.5rem;
-  margin-top: 0.5rem;
-}
-
-li {
-  margin-bottom: 0.75rem;
-}
-
 /* ===== Links ===== */
 a {
-  color: var(--royal-blue-purple);
-  text-decoration: underline;
-  font-weight: bold;
-}
-
-a:hover {
-  color: var(--muted-lavender-blue);
+  /* remove underlines globally */
+  text-decoration: none;
 }
 
 /* ===== Footer ===== */
@@ -234,26 +220,21 @@ footer {
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--pale-lavender-grey);
 }
-
 .accordion-header h2 {
   margin: 0;
   font-size: 1.5rem;
 }
-
 .accordion-content {
   display: none;
   margin-top: 1rem;
 }
-
 .arrow {
   font-size: 1.2rem;
   transition: transform 0.3s ease;
 }
-
 .accordion.open .accordion-content {
   display: block;
 }
-
 .accordion.open .arrow {
   transform: rotate(180deg);
 }
