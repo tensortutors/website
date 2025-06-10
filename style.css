@@ -29,12 +29,13 @@ body {
 .navbar {
   display: flex;
   background-color: var(--very-dark-indigo);
-  padding: 0.5rem 2rem;
+  height: 60px;
+  padding: 0 2rem;
   border-bottom: 4px solid var(--royal-blue-purple);
   position: sticky;
   top: 0;
   z-index: 1000;
-  align-items: center;
+  align-items: stretch;
 }
 .nav-left {
   display: flex;
@@ -44,41 +45,51 @@ body {
 .logo-small {
   background: url('images/TTlogo_semi.png') no-repeat center center;
   background-size: contain;
-  height: 40px;
-  width: 40px;
+  height: 100%;
+  width: 60px;
 }
 .nav-title {
   color: var(--white);
   font-size: 1.5rem;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
 }
 .nav-list {
   display: flex;
   flex: 1;
   margin-left: 2rem;
-  justify-content: space-between;
-  align-items: center;
 }
 .nav-list li {
   list-style: none;
   flex: 1;
-  text-align: center;
 }
 .nav-list li a {
-  display: block;
-  padding: 0.75rem 1rem;
-  background-color: var(--medium-periwinkle);
-  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: var(--very-dark-indigo);
   color: var(--white);
   font-weight: bold;
   transition: background 0.2s ease;
   text-decoration: none;
+  border-radius: 0;
 }
 .nav-list li a:hover {
-  background-color: var(--muted-lavender-blue);
+  background-color: var(--royal-blue-purple);
+}
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 2rem;
+  cursor: pointer;
 }
 
-/* ===== Hero Header ===== */
+/* ===== Hero Header ===== *//* ===== Hero Header ===== */
 .hero {
   padding: 3rem 1rem 2rem;
   text-align: center;
