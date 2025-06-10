@@ -156,50 +156,31 @@ main {
 }
 
 /* Stack benefits cards vertically on narrower screens */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   /* Navbar collapse adjustments */
   .navbar {
-    flex-wrap: wrap;
-    align-items: center;
-    /* remove fixed height if set */
     height: auto;
+    flex-wrap: wrap;
+    align-items: flex-start;
   }
-  /* Show hamburger toggle on mobile */
+  .nav-list {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    margin: 0;
+  }
   .nav-toggle {
     display: block;
     margin-left: auto;
-    background: none;
-    border: none;
-    color: var(--white);
-    font-size: 2rem;
-    cursor: pointer;
   }
-  /* Hide nav links initially */
-  .nav-list {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: var(--very-dark-indigo);
-    margin-top: 0.5rem;
-    z-index: 999;
-  }
-  /* Show nav-list when toggled */
+  /* When toggled, show nav-list below header */
   .nav-list.show-nav {
     display: flex;
   }
-  /* Nav items full width */
-  .nav-list li {
-    flex: none;
-    width: 100%;
-    text-align: left;
-  }
+  /* Make links full width on collapse */
   .nav-list li a {
-    padding: 1rem;
     height: auto;
-  }
-  /* Restack other content below navbar */
-  main {
-    margin-top: 0;
+    padding: 0.75rem 1rem;
   }
   /* Stack benefits cards vertically */
   .benefits-container {
@@ -208,5 +189,108 @@ main {
   .benefits-container .card {
     flex: 1 1 auto;
     width: 100%;
+  }
+}
+  .benefits-container .card {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+}
+.benefits-container .card {
+  flex: 1;
+}
+
+/* ===== Card Sections ===== */
+.card {
+  background-color: #EBEDFB; /* Soft periwinkle */
+  color: var(--black);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 16px;
+  border: 1px solid #D8DBF1; /* Slight contrast edge */
+  box-shadow: 0 8px 16px rgba(17, 14, 89, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(17, 14, 89, 0.12);
+}
+
+/* ===== Headings ===== */
+h2 {
+  font-size: 1.75rem;
+  color: var(--royal-blue-purple);
+  margin-bottom: 1rem;
+}
+
+/* ===== Links ===== */
+a {
+  /* remove underlines globally */
+  text-decoration: none;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 1.5rem 0;
+  background: var(--very-dark-indigo);
+  color: var(--white);
+  font-size: 0.9rem;
+}
+
+/* ===== Accordion Cards ===== */
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--pale-lavender-grey);
+}
+.accordion-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+.accordion-content {
+  display: none;
+  margin-top: 1rem;
+}
+.arrow {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+.accordion.open .accordion-content {
+  display: block;
+}
+.accordion.open .arrow {
+  transform: rotate(180deg);
+}
+
+/* ===== Responsive Navbar Collapse ===== */
+@media (max-width: 768px) {
+  /* Hide nav links and show toggle */
+  .nav-list {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 0.5rem;
+  }
+  .nav-toggle {
+    display: block;
+    margin-left: auto;
+  }
+  /* When toggled, show nav-list */
+  .nav-list.show-nav {
+    display: flex;
+  }
+  /* Navbar can wrap items */
+  .navbar {
+    flex-wrap: wrap;
+  }
+  /* Make links full width on collapse */
+  .nav-list li a {
+    height: auto;
+    padding: 0.75rem 1rem;
   }
 }
