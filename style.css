@@ -161,65 +161,9 @@ main {
   .navbar {
     flex-wrap: wrap;
     align-items: center;
+    /* remove fixed height if set */
     height: auto;
   }
-  /* Show hamburger toggle on mobile */
-  .nav-toggle {
-    display: block;
-    margin-left: auto;
-    background: none;
-    border: none;
-    color: var(--white);
-    font-size: 2rem;
-    cursor: pointer;
-  }
-  /* Hide nav links initially */
-  .nav-list {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background-color: var(--royal-blue-purple);
-    z-index: 999;
-  }
-  /* Show nav-list when toggled */
-  .nav-list.show-nav {
-    display: flex;
-  }
-  /* Nav items full width */
-  .nav-list li {
-    flex: none;
-    width: 100%;
-    text-align: left;
-  }
-  /* Mobile nav links darker background */
-  .nav-list li a {
-    padding: 1rem;
-    height: auto;
-    background-color: var(--very-dark-indigo);
-  }
-  .nav-list li a:hover {
-    background-color: var(--muted-lavender-blue);
-  }
-  /* Ensure logo remains visible */
-  .logo-small, .nav-title {
-    z-index: 1000;
-  }
-  /* Restack other content below navbar */
-  main {
-    margin-top: 0;
-  }
-  /* Stack benefits cards vertically */
-  .benefits-container {
-    flex-direction: column;
-  }
-  .benefits-container .card {
-    flex: 1 1 auto;
-    width: 100%;
-  }
-}
   /* Show hamburger toggle on mobile */
   .nav-toggle {
     display: block;
