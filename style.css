@@ -125,6 +125,13 @@ body {
   color: var(--royal-blue-purple);
   border: 2px solid var(--royal-blue-purple);
 }
+/* Hover style for book a tutor button: change accent only */
+.btn-outline:hover {
+  background-color: transparent;
+  border-color: #7D5FFF;
+  color: #7D5FFF;
+}
+
 .btn.large {
   padding: 1rem 2rem;
   font-size: 1.1rem;
