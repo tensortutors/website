@@ -157,17 +157,38 @@ main {
 
 /* Stack benefits cards vertically on narrower screens */
 @media (max-width: 768px) {
-  .benefits-container {
-    flex-direction: column;
+
+  /* Navbar collapse adjustments */
+  .navbar {
+    height: auto;
+    flex-wrap: wrap;
+    align-items: flex-start;
   }
+  .nav-list {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    margin: 0;
+  }
+  .nav-toggle {
+    display: block;
+    margin-left: auto;
+  }
+  /* When toggled, show nav-list below header */
+  .nav-list.show-nav {
+    display: flex;
+  }
+  /* Make links full width on collapse */
+  .nav-list li a {
+    height: auto;
+    padding: 0.75rem 1rem;
+  }
+
+}
   .benefits-container .card {
     flex: 1 1 auto;
     width: 100%;
   }
-}
-.benefits-container .card {
-  flex: 1;
-}
 
 /* ===== Card Sections ===== */
 .card {
