@@ -137,6 +137,33 @@ body {
   color: var(--very-dark-indigo);
 }
 
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 16px;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--royal-blue-purple);
+  color: var(--white);
+  border: none;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--royal-blue-purple);
+  border: 2px solid var(--royal-blue-purple);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(17, 14, 89, 0.12);
+}
+
 /* ===== Main Layout ===== */
 main {
   max-width: 1000px;
@@ -160,7 +187,6 @@ main {
   transform: translateY(-4px);
   box-shadow: 0 12px 24px rgba(17, 14, 89, 0.12);
 }
-
 
 /* ===== Headings ===== */
 h2 {
@@ -200,7 +226,6 @@ footer {
 }
 
 /* ===== Accordion Cards ===== */
-
 .accordion-header {
   display: flex;
   justify-content: space-between;
