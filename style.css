@@ -147,6 +147,23 @@ main {
   justify-content: space-between;
   gap: 1rem;
   margin-top: 1rem;
+  flex-wrap: wrap;
+}
+/* Each card takes equal width, with basis for responsive behavior */
+.benefits-container .card {
+  flex: 1 1 calc(33.333% - 1rem);
+  min-width: 240px;
+}
+
+/* Stack benefits cards vertically on narrower screens */
+@media (max-width: 768px) {
+  .benefits-container {
+    flex-direction: column;
+  }
+  .benefits-container .card {
+    flex: 1 1 auto;
+    width: 100%;
+  }
 }
 .benefits-container .card {
   flex: 1;
@@ -217,4 +234,32 @@ footer {
 }
 .accordion.open .arrow {
   transform: rotate(180deg);
+}
+
+/* ===== Responsive Navbar Collapse ===== */
+@media (max-width: 768px) {
+  /* Hide nav links and show toggle */
+  .nav-list {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 0.5rem;
+  }
+  .nav-toggle {
+    display: block;
+    margin-left: auto;
+  }
+  /* When toggled, show nav-list */
+  .nav-list.show-nav {
+    display: flex;
+  }
+  /* Navbar can wrap items */
+  .navbar {
+    flex-wrap: wrap;
+  }
+  /* Make links full width on collapse */
+  .nav-list li a {
+    height: auto;
+    padding: 0.75rem 1rem;
+  }
 }
