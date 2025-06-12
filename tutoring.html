@@ -2,19 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tutoring - Tensor Tutors</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TensorTutors – Blog</title>
   <link rel="stylesheet" href="style.css">
-  <script>
-    fetch("nav.html")
-      .then(res => res.text())
-      .then(data => document.getElementById("navbar").innerHTML = data);
-  </script>
 </head>
 <body>
-  <div id="navbar"></div>
+
+  <header class="navbar">
+    <div class="nav-left">
+      <div class="logo-small"></div>
+      <div class="nav-title">TensorTutors</div>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="tutoring.html">Tutors</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+  </header>
+
   <main>
-    <h1>Tutoring Services</h1>
-    <p>Our offerings and how to book sessions.</p>
+    <section class="hero">
+      <h1>Tutoring Services</h1>
+      <p class="subtitle">Our offerings and how to book.</p>
+    </section>
   </main>
+
+  <footer>
+    <p>&copy; 2025 TensorTutors. All rights reserved.</p>
+  </footer>
+
+<script src="nav.js"></script>
+
 </body>
 </html>
