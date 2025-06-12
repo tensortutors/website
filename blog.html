@@ -1,20 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Blog - Tensor Tutors</title>
-  <link rel="stylesheet" href="style.css">
-  <script>
-    fetch("nav.html")
-      .then(res => res.text())
-      .then(data => document.getElementById("navbar").innerHTML = data);
-  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources | TensorTutors</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="images/TTlogo_semi.png" type="image/png" />
+  <style>
+    /* Accordion headers */
+    .accordion-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--pale-lavender-grey);
+    }
+    .accordion-header h2 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: var(--royal-blue-purple);
+    }
+    .arrow {
+      font-size: 1.2rem;
+      transition: transform 0.3s ease;
+      color: var(--very-dark-indigo);
+    }
+
+    /* Accordion content hidden by default */
+    .accordion-content {
+      display: none;
+      margin-top: 1rem;
+    }
+    .accordion.open .accordion-content {
+      display: block;
+    }
+    .accordion.open .arrow {
+      transform: rotate(180deg);
+    }
+
+    /* Two-column layout */
+    .resource-columns {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .resource-column {
+      flex: 1;
+      min-width: 280px;
+    }
+    .resource-column h3 {
+      font-size: 1.2rem;
+      color: var(--royal-blue-purple);
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Inner collapsibles */
+    .collapse-button {
+      background-color: var(--royal-blue-purple);
+      color: var(--white);
+      padding: 0.75rem 1.25rem;
+      border: none;
+      border-radius: 12px;
+      margin-top: 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      width: 100%;
+      text-align: left;
+    }
+    .collapse-button:hover {
+      background-color: var(--medium-periwinkle);
+    }
+    .collapse-content {
+      display: none;
+      margin-top: 0.5rem;
+      padding-left: 1rem;
+    }
+
+    /* Resource links */
+    .resource-link {
+      display: block;
+      margin: 0.5rem 0;
+      text-decoration: none;
+      color: var(--very-dark-indigo);
+      font-weight: 500;
+    }
+    .resource-link:hover {
+      text-decoration: underline;
+      color: var(--royal-blue-purple);
+    }
+  </style>
 </head>
+
 <body>
   <div id="navbar"></div>
-  <main>
-    <h1>Blog posts shown here!</h1>
-    <p>Our projects and next steps.</p>
-  </main>
+
+  <header class="hero">
+    <h1>Blog</h1>
+    <p class="subtitle">Our projects and updates shown here!</p>
+  </header>
+
+  <footer>
+    <p>&copy; 2025 TensorTutors</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Load navbar
+      fetch("nav.html")
+        .then(res => res.text())
+        .then(html => document.getElementById("navbar").innerHTML = html);
+      });
+    });
+  </script>
+
+  <script src="nav.js"></script>
+
 </body>
 </html>
