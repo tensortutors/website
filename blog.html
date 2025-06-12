@@ -123,36 +123,7 @@
     <p>&copy; 2025 TensorTutors</p>
   </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      // Load navbar
-      fetch("nav.html")
-        .then(res => res.text())
-        .then(html => document.getElementById("navbar").innerHTML = html);
-
-      // Accordion toggle
-      document.querySelectorAll(".accordion-header").forEach(header => {
-        header.addEventListener("click", () => {
-          const card = header.closest(".accordion");
-          const open = card.classList.contains("open");
-          document.querySelectorAll(".accordion").forEach(acc => acc.classList.remove("open"));
-          if (!open) card.classList.add("open");
-        });
-      });
-
-      // Inner collapse toggles
-      document.querySelectorAll(".collapse-button").forEach(btn => {
-        btn.addEventListener("click", () => {
-          const content = document.getElementById(btn.dataset.target);
-          if (content) {
-            content.style.display = content.style.display === "block" ? "none" : "block";
-          }
-        });
-      });
-    });
-  </script>
-
-  <script src="nav.js"></script>
+<script src="nav.js"></script>
 
 </body>
 </html>
