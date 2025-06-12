@@ -56,8 +56,9 @@
       margin-bottom: 0.5rem;
     }
 
-    /* Inner collapsibles */
+    /* Inner links styled as buttons */
     .collapse-button {
+      display: block;
       background-color: var(--royal-blue-purple);
       color: var(--white);
       padding: 0.75rem 1.25rem;
@@ -69,14 +70,10 @@
       transition: background-color 0.2s ease;
       width: 100%;
       text-align: left;
+      text-decoration: none;
     }
     .collapse-button:hover {
       background-color: var(--medium-periwinkle);
-    }
-    .collapse-content {
-      display: none;
-      margin-top: 0.5rem;
-      padding-left: 1rem;
     }
 
     /* Resource links */
@@ -114,33 +111,15 @@
           <!-- Free -->
           <div class="resource-column">
             <h3>🎓 Free Resources</h3>
-            <button class="collapse-button" data-target="maths-free-notes">📘 Summary Notes</button>
-            <div class="collapse-content" id="maths-free-notes">
-              <a href="#" class="resource-link">Algebra Basics (PDF)</a>
-              <a href="#" class="resource-link">Trigonometry Overview (PDF)</a>
-            </div>
-            <button class="collapse-button" data-target="maths-free-examples">✅ Worked Examples</button>
-            <div class="collapse-content" id="maths-free-examples">
-              <a href="#" class="resource-link">Differentiation Example</a>
-              <a href="#" class="resource-link">Binomial Expansion</a>
-            </div>
-            <button class="collapse-button" data-target="maths-free-videos">🎥 YouTube Videos</button>
-            <div class="collapse-content" id="maths-free-videos">
-              <iframe width="100%" height="200" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-            </div>
+            <a class="collapse-button" href="maths/summary-notes.html">📘 Summary Notes</a>
+            <a class="collapse-button" href="maths/worked-examples.html">✅ Worked Examples</a>
+            <a class="collapse-button" href="maths/youtube-videos.html">🎥 YouTube Videos</a>
           </div>
           <!-- Paid -->
           <div class="resource-column">
             <h3>💼 Paid Resources</h3>
-            <button class="collapse-button" data-target="maths-paid-packs">📦 Premium Packs</button>
-            <div class="collapse-content" id="maths-paid-packs">
-              <a href="#" class="resource-link">A-Level Full Revision Pack</a>
-              <a href="#" class="resource-link">Topic-by-Topic Exam Booklets</a>
-            </div>
-            <button class="collapse-button" data-target="maths-paid-checklists">📊 Advanced Checklists</button>
-            <div class="collapse-content" id="maths-paid-checklists">
-              <a href="#" class="resource-link">OCR + Edexcel Spec Map</a>
-            </div>
+            <a class="collapse-button" href="maths/premium-packs.html">📦 Premium Packs</a>
+            <a class="collapse-button" href="maths/advanced-checklists.html">📊 Advanced Checklists</a>
           </div>
         </div>
       </div>
@@ -157,33 +136,15 @@
           <!-- Free -->
           <div class="resource-column">
             <h3>🎓 Free Resources</h3>
-            <button class="collapse-button" data-target="fm-free-notes">📘 Summary Notes</button>
-            <div class="collapse-content" id="fm-free-notes">
-              <a href="#" class="resource-link">Complex Numbers Guide</a>
-              <a href="#" class="resource-link">Matrix Algebra Overview</a>
-            </div>
-            <button class="collapse-button" data-target="fm-free-examples">✅ Worked Examples</button>
-            <div class="collapse-content" id="fm-free-examples">
-              <a href="#" class="resource-link">Eigenvalues Problem</a>
-              <a href="#" class="resource-link">Contour Integration</a>
-            </div>
-            <button class="collapse-button" data-target="fm-free-videos">🎥 YouTube Videos</button>
-            <div class="collapse-content" id="fm-free-videos">
-              <iframe width="100%" height="200" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-            </div>
+            <a class="collapse-button" href="further-maths/summary-notes.html">📘 Summary Notes</a>
+            <a class="collapse-button" href="further-maths/worked-examples.html">✅ Worked Examples</a>
+            <a class="collapse-button" href="further-maths/youtube-videos.html">🎥 YouTube Videos</a>
           </div>
           <!-- Paid -->
           <div class="resource-column">
             <h3>💼 Paid Resources</h3>
-            <button class="collapse-button" data-target="fm-paid-packs">📦 Premium Packs</button>
-            <div class="collapse-content" id="fm-paid-packs">
-              <a href="#" class="resource-link">Further Maths Full Revision Pack</a>
-              <a href="#" class="resource-link">Exam-style Problem Sets</a>
-            </div>
-            <button class="collapse-button" data-target="fm-paid-checklists">📊 Advanced Checklists</button>
-            <div class="collapse-content" id="fm-paid-checklists">
-              <a href="#" class="resource-link">Further Maths Spec Map</a>
-            </div>
+            <a class="collapse-button" href="further-maths/premium-packs.html">📦 Premium Packs</a>
+            <a class="collapse-button" href="further-maths/advanced-checklists.html">📊 Advanced Checklists</a>
           </div>
         </div>
       </div>
@@ -200,32 +161,15 @@
           <!-- Free -->
           <div class="resource-column">
             <h3>🎓 Free Resources</h3>
-            <button class="collapse-button" data-target="physics-free-notes">📘 Summary Notes</button>
-            <div class="collapse-content" id="physics-free-notes">
-              <a href="#" class="resource-link">Mechanics Revision (PDF)</a>
-              <a href="#" class="resource-link">Electricity Quick Guide</a>
-            </div>
-            <button class="collapse-button" data-target="physics-free-examples">✅ Worked Examples</button>
-            <div class="collapse-content" id="physics-free-examples">
-              <a href="#" class="resource-link">Projectile Motion Walkthrough</a>
-            </div>
-            <button class="collapse-button" data-target="physics-free-videos">🎥 YouTube Videos</button>
-            <div class="collapse-content" id="physics-free-videos">
-              <iframe width="100%" height="200" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-            </div>
+            <a class="collapse-button" href="physics/summary-notes.html">📘 Summary Notes</a>
+            <a class="collapse-button" href="physics/worked-examples.html">✅ Worked Examples</a>
+            <a class="collapse-button" href="physics/youtube-videos.html">🎥 YouTube Videos</a>
           </div>
           <!-- Paid -->
           <div class="resource-column">
             <h3>💼 Paid Resources</h3>
-            <button class="collapse-button" data-target="physics-paid-packs">📦 Premium Packs</button>
-            <div class="collapse-content" id="physics-paid-packs">
-              <a href="#" class="resource-link">A-Level Physics Revision Pack</a>
-              <a href="#" class="resource-link">Practical Lab Worksheets</a>
-            </div>
-            <button class="collapse-button" data-target="physics-paid-checklists">📊 Advanced Checklists</button>
-            <div class="collapse-content" id="physics-paid-checklists">
-              <a href="#" class="resource-link">Physics Spec Topic Map</a>
-            </div>
+            <a class="collapse-button" href="physics/premium-packs.html">📦 Premium Packs</a>
+            <a class="collapse-button" href="physics/advanced-checklists.html">📊 Advanced Checklists</a>
           </div>
         </div>
       </div>
@@ -242,32 +186,15 @@
           <!-- Free -->
           <div class="resource-column">
             <h3>🎓 Free Resources</h3>
-            <button class="collapse-button" data-target="cs-free-notes">📘 Summary Notes</button>
-            <div class="collapse-content" id="cs-free-notes">
-              <a href="#" class="resource-link">Data Structures Overview</a>
-              <a href="#" class="resource-link">Logic Gates Guide</a>
-            </div>
-            <button class="collapse-button" data-target="cs-free-examples">✅ Worked Examples</button>
-            <div class="collapse-content" id="cs-free-examples">
-              <a href="#" class="resource-link">Trace Table Example</a>
-            </div>
-            <button class="collapse-button" data-target="cs-free-videos">🎥 YouTube Videos</button>
-            <div class="collapse-content" id="cs-free-videos">
-              <iframe width="100%" height="200" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-            </div>
+            <a class="collapse-button" href="computer-science/summary-notes.html">📘 Summary Notes</a>
+            <a class="collapse-button" href="computer-science/worked-examples.html">✅ Worked Examples</a>
+            <a class="collapse-button" href="computer-science/youtube-videos.html">🎥 YouTube Videos</a>
           </div>
           <!-- Paid -->
           <div class="resource-column">
             <h3>💼 Paid Resources</h3>
-            <button class="collapse-button" data-target="cs-paid-packs">📦 Premium Packs</button>
-            <div class="collapse-content" id="cs-paid-packs">
-              <a href="#" class="resource-link">Full CS Revision Bundle</a>
-              <a href="#" class="resource-link">Exam-Style Problem Set</a>
-            </div>
-            <button class="collapse-button" data-target="cs-paid-checklists">📊 Advanced Checklists</button>
-            <div class="collapse-content" id="cs-paid-checklists">
-              <a href="#" class="resource-link">Comp Sci Spec Map</a>
-            </div>
+            <a class="collapse-button" href="computer-science/premium-packs.html">📦 Premium Packs</a>
+            <a class="collapse-button" href="computer-science/advanced-checklists.html">📊 Advanced Checklists</a>
           </div>
         </div>
       </div>
@@ -308,6 +235,5 @@
   </script>
 
   <script src="nav.js"></script>
-
 </body>
 </html>
