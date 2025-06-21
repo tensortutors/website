@@ -4,7 +4,148 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TensorTutors – Blog</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f2f5;
+      color: #222;
+    }
+
+    header.navbar {
+      background: #1a1a1a;
+      color: white;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-small {
+      width: 32px;
+      height: 32px;
+      background: white;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .nav-title {
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .nav-list li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .hero {
+      padding: 2rem 1rem;
+      background: #ffffff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .hero .subtitle {
+      margin-top: 0.5rem;
+      color: #555;
+    }
+
+    main.feed {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem;
+      max-width: 600px;
+      margin: 1rem auto;
+    }
+
+    .post {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      padding: 1rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .post-header {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #ccc;
+    }
+
+    .post-meta {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .post-meta strong {
+      font-size: 1rem;
+    }
+
+    .post-meta span {
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    .post-content {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .post-actions {
+      font-size: 0.9rem;
+      color: #0077cc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #1a1a1a;
+      color: white;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+  
 </head>
 <body>
 
@@ -30,56 +171,60 @@
   </section>
 
   <main class="feed">
-    <article class="post">
-      <h2>🎉 TensorTutors Launch</h2>
-      <p>We’re live! Our mission: high-quality STEM tutoring & free resources. Thanks for the support 💙</p>
-      <a href="#">Read more →</a>
-    </article>
 
-    <article class="post">
-      <h2>📘 A-Level Maths Notes Drop</h2>
-      <p>New summary notes and worked examples for AQA & Edexcel maths now available on the Resources page.</p>
-      <a href="#">Check them out →</a>
-    </article>
+    <section class="post">
+      <div class="post-header">
+        <div class="avatar"></div>
+        <div class="post-meta">
+          <strong>TensorTutors</strong>
+          <span>@tensortutors · 1h ago</span>
+        </div>
+      </div>
+      <div class="post-content">
+        We're live! 🚀 Launching our platform for free STEM resources and tutoring. Explore maths, physics, compsci and more! #STEMeducation #LaunchDay
+      </div>
+      <div class="post-actions">
+        <a href="#">Read more →</a>
+      </div>
+    </section>
 
-    <article class="post">
-      <h2>🎬 Behind the Scenes: YouTube Shorts</h2>
-      <p>Ever wondered how we shoot educational shorts? Lighting, scripts, and a bit of chaos 😅</p>
-      <a href="#">Watch the video →</a>
-    </article>
+    <section class="post">
+      <div class="post-header">
+        <div class="avatar"></div>
+        <div class="post-meta">
+          <strong>TensorTutors</strong>
+          <span>@tensortutors · 2d ago</span>
+        </div>
+      </div>
+      <div class="post-content">
+        🧠 Just dropped a fresh set of A-Level Further Maths resources – including worked examples for matrices and complex numbers.
+      </div>
+      <div class="post-actions">
+        <a href="#">Download PDF →</a>
+      </div>
+    </section>
 
-    <article class="post">
-      <h2>🧪 Physics Sim Demos in Python</h2>
-      <p>We’re experimenting with Snell’s Law & orbital simulations using Python + Pygame. Interactive, visual, fun!</p>
-      <a href="#">Try the demo →</a>
-    </article>
+    <section class="post">
+      <div class="post-header">
+        <div class="avatar"></div>
+        <div class="post-meta">
+          <strong>TensorTutors</strong>
+          <span>@tensortutors · 5d ago</span>
+        </div>
+      </div>
+      <div class="post-content">
+        🎥 Shooting some new short-form videos for YouTube and TikTok this week! Got a concept you'd like us to explain? Drop a comment 👇
+      </div>
+      <div class="post-actions">
+        <a href="#">Watch now →</a>
+      </div>
+    </section>
+
   </main>
 
   <footer>
     <p>&copy; 2025 TensorTutors. All rights reserved.</p>
   </footer>
-
-  <script>
-    // Optional: Fade in posts on scroll (basic)
-    const posts = document.querySelectorAll('.post');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = 1;
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
-
-    posts.forEach(post => {
-      post.style.opacity = 0;
-      post.style.transform = 'translateY(20px)';
-      post.style.transition = 'all 0.6s ease-out';
-      observer.observe(post);
-    });
-  </script>
 
 <script src="nav.js"></script>
 
