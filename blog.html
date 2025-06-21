@@ -24,37 +24,62 @@
     </ul>
   </header>
 
-  <main>
-    <section class="hero">
-      <h1>Blog</h1>
-      <p class="subtitle">Our projects and updates shown here!</p>
-    </section>
-  
-    <section class="blog-posts">
-      <article class="post">
-        <h2>🚀 Launching TensorTutors</h2>
-        <p>We're excited to announce the launch of TensorTutors – a platform for high-quality STEM resources and tutoring!</p>
-        <a href="post1.html">Read more →</a>
-      </article>
-  
-      <article class="post">
-        <h2>📚 A-Level Physics: New Resources</h2>
-        <p>Check out our updated worked examples and concise revision notes for the AQA Physics specification.</p>
-        <a href="post2.html">Read more →</a>
-      </article>
-  
-      <article class="post">
-        <h2>🎥 Behind the Scenes: Creating Our First Video</h2>
-        <p>We walk you through how we produce engaging short-form science content for YouTube and TikTok.</p>
-        <a href="post3.html">Read more →</a>
-      </article>
-    </section>
-  </main>
+ <section class="hero">
+    <h1>Blog</h1>
+    <p class="subtitle">Our latest updates, projects & thoughts 👇</p>
+  </section>
 
+  <main class="feed">
+    <article class="post">
+      <h2>🎉 TensorTutors Launch</h2>
+      <p>We’re live! Our mission: high-quality STEM tutoring & free resources. Thanks for the support 💙</p>
+      <a href="#">Read more →</a>
+    </article>
+
+    <article class="post">
+      <h2>📘 A-Level Maths Notes Drop</h2>
+      <p>New summary notes and worked examples for AQA & Edexcel maths now available on the Resources page.</p>
+      <a href="#">Check them out →</a>
+    </article>
+
+    <article class="post">
+      <h2>🎬 Behind the Scenes: YouTube Shorts</h2>
+      <p>Ever wondered how we shoot educational shorts? Lighting, scripts, and a bit of chaos 😅</p>
+      <a href="#">Watch the video →</a>
+    </article>
+
+    <article class="post">
+      <h2>🧪 Physics Sim Demos in Python</h2>
+      <p>We’re experimenting with Snell’s Law & orbital simulations using Python + Pygame. Interactive, visual, fun!</p>
+      <a href="#">Try the demo →</a>
+    </article>
+  </main>
 
   <footer>
     <p>&copy; 2025 TensorTutors. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Optional: Fade in posts on scroll (basic)
+    const posts = document.querySelectorAll('.post');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    posts.forEach(post => {
+      post.style.opacity = 0;
+      post.style.transform = 'translateY(20px)';
+      post.style.transition = 'all 0.6s ease-out';
+      observer.observe(post);
+    });
+  </script>
 
 <script src="nav.js"></script>
 
