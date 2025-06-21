@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TensorTutors – Blog</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <header class="navbar">
-    <div class="nav-left">
-      <div class="logo-small"></div>
-      <div class="nav-title">TensorTutors</div>
+    <div class="nav-container">
+      <div class="nav-left">
+        <div class="logo-small"></div>
+        <div class="nav-title">TensorTutors</div>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="tutoring.html">Tutors</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+      </ul>
     </div>
-    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-    <ul class="nav-list">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="tutoring.html">Tutors</a></li>
-      <li><a href="resources.html">Resources</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="blog.html">Blog</a></li>
-    </ul>
   </header>
 
   <main>
@@ -29,13 +31,14 @@
       <h1>Blog</h1>
       <p class="subtitle">Our projects and updates shown here!</p>
     </section>
+    <!-- Blog posts would go here -->
   </main>
 
   <footer>
     <p>&copy; 2025 TensorTutors. All rights reserved.</p>
   </footer>
 
-<script src="nav.js"></script>
+  <script src="nav.js"></script>
 
 </body>
 </html>
