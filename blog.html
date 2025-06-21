@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TensorTutors – Blog</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -20,14 +20,48 @@
       <li><a href="tutoring.html">Tutors</a></li>
       <li><a href="resources.html">Resources</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a href="blog.html">Blog</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
     </ul>
   </header>
 
   <main>
     <section class="hero">
       <h1>Blog</h1>
-      <p class="subtitle">Our projects and updates shown here!</p>
+      <p class="subtitle">Bite-sized updates, ideas and announcements</p>
+    </section>
+
+    <section class="benefits-container">
+      <div class="card">
+        <div class="post-header">
+          <strong>TensorTutors</strong> · <span style="color: var(--medium-periwinkle);">@tensortutors</span>
+        </div>
+        <p>🚀 We're live! Launching with free STEM resources, tutoring, and a growing library of worked examples & videos. Welcome to the journey!</p>
+        <a class="btn btn-outline" href="#">Read more →</a>
+      </div>
+
+      <div class="card">
+        <div class="post-header">
+          <strong>TensorTutors</strong> · <span style="color: var(--medium-periwinkle);">@tensortutors</span>
+        </div>
+        <p>📘 New drop! Our A-Level Further Maths matrices and complex numbers notes are now up on the site.</p>
+        <a class="btn btn-outline" href="#">View notes →</a>
+      </div>
+
+      <div class="card">
+        <div class="post-header">
+          <strong>TensorTutors</strong> · <span style="color: var(--medium-periwinkle);">@tensortutors</span>
+        </div>
+        <p>🎥 Behind-the-scenes: how we make our YouTube Shorts on physics concepts, plus a blooper reel (oops). Want a specific topic covered?</p>
+        <a class="btn btn-outline" href="#">Watch now →</a>
+      </div>
+
+      <div class="card">
+        <div class="post-header">
+          <strong>TensorTutors</strong> · <span style="color: var(--medium-periwinkle);">@tensortutors</span>
+        </div>
+        <p>🧪 Our new interactive Snell’s Law simulator (with beam intensity + TIR visualised) is now available to test in-browser. Built with Python + Pygame!</p>
+        <a class="btn btn-outline" href="#">Try the demo →</a>
+      </div>
     </section>
   </main>
 
@@ -35,7 +69,14 @@
     <p>&copy; 2025 TensorTutors. All rights reserved.</p>
   </footer>
 
-<script src="nav.js"></script>
+  <script>
+    // Mobile nav toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const navList = document.querySelector('.nav-list');
+    toggle.addEventListener('click', () => {
+      navList.classList.toggle('show-nav');
+    });
+  </script>
 
 </body>
 </html>
